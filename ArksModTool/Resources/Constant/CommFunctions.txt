@@ -1,0 +1,9 @@
+OpenProcess
+ReadProcessMemory
+WriteProcessMemory
+CloseHandle
+CreateFileA
+SetNamedPipeHandleState
+PeekNamedPipe
+ReadFile
+WriteFile

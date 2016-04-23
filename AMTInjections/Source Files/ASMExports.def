@@ -1,0 +1,97 @@
+LIBRARY AMTInjections
+
+EXPORTS Camera1Override
+EXPORTS Camera1Override_End
+EXPORTS Camera1Override_Bindings
+
+EXPORTS Camera2Override
+EXPORTS Camera2Override_End
+EXPORTS Camera2Override_Bindings
+
+EXPORTS CommInit
+EXPORTS CommInit_End
+EXPORTS CommInit_Bindings
+
+EXPORTS CommMain
+EXPORTS CommMain_End
+EXPORTS CommMain_Bindings
+
+EXPORTS CommMainHook
+EXPORTS CommMainHook_End
+EXPORTS CommMainHook_Bindings
+
+EXPORTS Camera2TransOverride
+EXPORTS Camera2TransOverride_End
+EXPORTS Camera2TransOverride_Bindings
+
+EXPORTS CameraControlMain
+EXPORTS CameraControlMain_End
+EXPORTS CameraControlMain_Bindings
+
+EXPORTS CameraControlMainHook
+EXPORTS CameraControlMainHook_End
+EXPORTS CameraControlMainHook_Bindings
+
+EXPORTS CameraLandingOverride
+EXPORTS CameraLandingOverride_End
+EXPORTS CameraLandingOverride_Bindings
+
+EXPORTS DisableAutoShowLog
+EXPORTS DisableAutoShowLog_End
+EXPORTS DisableAutoShowLog_Bindings
+
+EXPORTS DisableECodeMapChange
+EXPORTS DisableECodeMapChange_End
+EXPORTS DisableECodeMapChange_Bindings
+
+EXPORTS InputScaleAuto
+EXPORTS InputScaleAuto_End
+EXPORTS InputScaleAuto_Bindings
+
+EXPORTS InputScaleNormal
+EXPORTS InputScaleNormal_End
+EXPORTS InputScaleNormal_Bindings
+
+EXPORTS ToggleFarCulling
+EXPORTS ToggleFarCulling_End
+EXPORTS ToggleFarCulling_Bindings
+
+EXPORTS ToggleFarCullingTerrain
+EXPORTS ToggleFarCullingTerrain_End
+EXPORTS ToggleFarCullingTerrain_Bindings
+
+EXPORTS ToggleIntroVideo
+EXPORTS ToggleIntroVideo_End
+EXPORTS ToggleIntroVideo_Bindings
+
+EXPORTS ToggleLOD
+EXPORTS ToggleLOD_End
+EXPORTS ToggleLOD_Bindings
+
+EXPORTS ToggleLODHook
+EXPORTS ToggleLODHook_End
+EXPORTS ToggleLODHook_Bindings
+
+EXPORTS ToggleNearCulling
+EXPORTS ToggleNearCulling_End
+EXPORTS ToggleNearCulling_Bindings
+
+EXPORTS ToggleUpdateCulling
+EXPORTS ToggleUpdateCulling_End
+EXPORTS ToggleUpdateCulling_Bindings
+
+EXPORTS UIHideECodes
+EXPORTS UIHideECodes_End
+EXPORTS UIHideECodes_Bindings
+
+EXPORTS UIHideMenus
+EXPORTS UIHideMenus_End
+EXPORTS UIHideMenus_Bindings
+
+EXPORTS UIHideScreenNotifications
+EXPORTS UIHideScreenNotifications_End
+EXPORTS UIHideScreenNotifications_Bindings
+
+EXPORTS UIHideSubpalette
+EXPORTS UIHideSubpalette_End
+EXPORTS UIHideSubpalette_Bindings

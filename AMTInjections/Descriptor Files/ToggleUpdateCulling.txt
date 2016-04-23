@@ -1,0 +1,14 @@
+Addr : tag,			[bytes], F3 0F 5A 8F CC 00 00 00 F3 0F 5A 47 64 66 0F 2F
+Addr : pPatch,		[addr], tag, +0
+
+Addr : modFlags,	[addr], $data, +41
+Addr : const1,		[wptr], tag, +23
+Addr : const2,		[wptr], tag, +36
+
+
+Base : pPatch
+
+
+BindA : 0, modFlags
+BindA : 1, const1
+BindA : 2, const2

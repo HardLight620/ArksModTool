@@ -1,0 +1,180 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Descriptor Files">
+      <UniqueIdentifier>{f7e041d0-a5e7-49f5-b945-2643c6eb133a}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Source Files\ASMExports.def">
+      <Filter>Source Files</Filter>
+    </None>
+    <None Include="Source Files\ASMInclude.asm">
+      <Filter>Source Files</Filter>
+    </None>
+    <None Include="Source Files\AMTFlags.asm">
+      <Filter>Source Files</Filter>
+    </None>
+    <None Include="Source Files\ASMTemplate.asm">
+      <Filter>Source Files</Filter>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <MASM Include="Source Files\CommInit.asm">
+      <Filter>Source Files</Filter>
+    </MASM>
+    <MASM Include="Source Files\DllMain.asm">
+      <Filter>Source Files</Filter>
+    </MASM>
+    <MASM Include="Source Files\CommMain.asm">
+      <Filter>Source Files</Filter>
+    </MASM>
+    <MASM Include="Source Files\CommMainHook.asm">
+      <Filter>Source Files</Filter>
+    </MASM>
+    <MASM Include="Source Files\Camera1Override.asm">
+      <Filter>Source Files</Filter>
+    </MASM>
+    <MASM Include="Source Files\Camera2Override.asm">
+      <Filter>Source Files</Filter>
+    </MASM>
+    <MASM Include="Source Files\Camera2TransOverride.asm">
+      <Filter>Source Files</Filter>
+    </MASM>
+    <MASM Include="Source Files\CameraControlMain.asm">
+      <Filter>Source Files</Filter>
+    </MASM>
+    <MASM Include="Source Files\CameraControlMainHook.asm">
+      <Filter>Source Files</Filter>
+    </MASM>
+    <MASM Include="Source Files\CameraLandingOverride.asm">
+      <Filter>Source Files</Filter>
+    </MASM>
+    <MASM Include="Source Files\DisableECodeMapChange.asm">
+      <Filter>Source Files</Filter>
+    </MASM>
+    <MASM Include="Source Files\InputScaleAuto.asm">
+      <Filter>Source Files</Filter>
+    </MASM>
+    <MASM Include="Source Files\InputScaleNormal.asm">
+      <Filter>Source Files</Filter>
+    </MASM>
+    <MASM Include="Source Files\ToggleFarCulling.asm">
+      <Filter>Source Files</Filter>
+    </MASM>
+    <MASM Include="Source Files\ToggleFarCullingTerrain.asm">
+      <Filter>Source Files</Filter>
+    </MASM>
+    <MASM Include="Source Files\ToggleIntroVideo.asm">
+      <Filter>Source Files</Filter>
+    </MASM>
+    <MASM Include="Source Files\ToggleLOD.asm">
+      <Filter>Source Files</Filter>
+    </MASM>
+    <MASM Include="Source Files\ToggleLODHook.asm">
+      <Filter>Source Files</Filter>
+    </MASM>
+    <MASM Include="Source Files\ToggleNearCulling.asm">
+      <Filter>Source Files</Filter>
+    </MASM>
+    <MASM Include="Source Files\ToggleUpdateCulling.asm">
+      <Filter>Source Files</Filter>
+    </MASM>
+    <MASM Include="Source Files\UIHideECodes.asm">
+      <Filter>Source Files</Filter>
+    </MASM>
+    <MASM Include="Source Files\UIHideMenus.asm">
+      <Filter>Source Files</Filter>
+    </MASM>
+    <MASM Include="Source Files\UIHideScreenNotifications.asm">
+      <Filter>Source Files</Filter>
+    </MASM>
+    <MASM Include="Source Files\UIHideSubpalette.asm">
+      <Filter>Source Files</Filter>
+    </MASM>
+    <MASM Include="Source Files\DisableAutoShowLog.asm">
+      <Filter>Source Files</Filter>
+    </MASM>
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="Descriptor Files\CommMain.txt">
+      <Filter>Descriptor Files</Filter>
+    </Text>
+    <Text Include="Descriptor Files\CommMainHook.txt">
+      <Filter>Descriptor Files</Filter>
+    </Text>
+    <Text Include="Descriptor Files\Camera1Override.txt">
+      <Filter>Descriptor Files</Filter>
+    </Text>
+    <Text Include="Descriptor Files\Camera2Override.txt">
+      <Filter>Descriptor Files</Filter>
+    </Text>
+    <Text Include="Descriptor Files\Camera2TransOverride.txt">
+      <Filter>Descriptor Files</Filter>
+    </Text>
+    <Text Include="Descriptor Files\CameraControlMain.txt">
+      <Filter>Descriptor Files</Filter>
+    </Text>
+    <Text Include="Descriptor Files\CameraControlMainHook.txt">
+      <Filter>Descriptor Files</Filter>
+    </Text>
+    <Text Include="Descriptor Files\CameraLandingOverride.txt">
+      <Filter>Descriptor Files</Filter>
+    </Text>
+    <Text Include="Descriptor Files\CommInit.txt">
+      <Filter>Descriptor Files</Filter>
+    </Text>
+    <Text Include="Descriptor Files\DisableECodeMapChange.txt">
+      <Filter>Descriptor Files</Filter>
+    </Text>
+    <Text Include="Descriptor Files\InputScaleAuto.txt">
+      <Filter>Descriptor Files</Filter>
+    </Text>
+    <Text Include="Descriptor Files\InputScaleNormal.txt">
+      <Filter>Descriptor Files</Filter>
+    </Text>
+    <Text Include="Descriptor Files\ToggleFarCulling.txt">
+      <Filter>Descriptor Files</Filter>
+    </Text>
+    <Text Include="Descriptor Files\ToggleFarCullingTerrain.txt">
+      <Filter>Descriptor Files</Filter>
+    </Text>
+    <Text Include="Descriptor Files\ToggleIntroVideo.txt">
+      <Filter>Descriptor Files</Filter>
+    </Text>
+    <Text Include="Descriptor Files\ToggleLOD.txt">
+      <Filter>Descriptor Files</Filter>
+    </Text>
+    <Text Include="Descriptor Files\ToggleLODHook.txt">
+      <Filter>Descriptor Files</Filter>
+    </Text>
+    <Text Include="Descriptor Files\ToggleNearCulling.txt">
+      <Filter>Descriptor Files</Filter>
+    </Text>
+    <Text Include="Descriptor Files\ToggleUpdateCulling.txt">
+      <Filter>Descriptor Files</Filter>
+    </Text>
+    <Text Include="Descriptor Files\UIHideECodes.txt">
+      <Filter>Descriptor Files</Filter>
+    </Text>
+    <Text Include="Descriptor Files\UIHideMenus.txt">
+      <Filter>Descriptor Files</Filter>
+    </Text>
+    <Text Include="Descriptor Files\UIHideScreenNotifications.txt">
+      <Filter>Descriptor Files</Filter>
+    </Text>
+    <Text Include="Descriptor Files\UIHideSubpalette.txt">
+      <Filter>Descriptor Files</Filter>
+    </Text>
+    <Text Include="Descriptor Files\Addresses.txt">
+      <Filter>Descriptor Files</Filter>
+    </Text>
+    <Text Include="Descriptor Files\DisableAutoShowLog.txt">
+      <Filter>Descriptor Files</Filter>
+    </Text>
+  </ItemGroup>
+</Project>

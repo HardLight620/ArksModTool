@@ -1,0 +1,15 @@
+Addr : tag,				[bytes], F3 0F 5A 65 08 F3 0F 5A AF 10 01 00 00 0F 28 C2 0F 28 CA 0F C6 C2 09 F2 0F 5C EC 0F C6 CA 12
+
+Addr : pPatch,			[addr], $code, +400
+Addr : pGameManager,	[wptr], tag, +83
+
+Addr : fnGetCamManager,	[offs], tag, +90
+Addr : fnCam1Override,	[addr], $code, +500
+Addr : fnCam2Override,	[addr], $code, +580
+
+Base : pPatch
+
+BindA : 0, pGameManager
+BindF : 1, fnGetCamManager
+BindF : 2, fnCam1Override
+BindF : 3, fnCam2Override

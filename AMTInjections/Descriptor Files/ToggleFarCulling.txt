@@ -1,0 +1,8 @@
+Addr : tag,			[bytes], F7 46 18 00 00 00 20 0F 84 59 02 00 00 8B 56 2C
+Addr : pPatch,		[addr], tag, +0
+Addr : modFlags,	[addr], $data, +41
+
+
+Base : pPatch
+
+BindA : 0, modFlags

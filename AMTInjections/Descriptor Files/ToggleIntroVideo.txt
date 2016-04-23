@@ -1,0 +1,14 @@
+Addr : tag,			[bytes], 89 7C 24 58 8D 54 24 5C C7 44 24 54 02 00 00 00
+Addr : pPatch,		[addr], tag, +CB
+Addr : modFlags,	[addr], $data, +40
+Addr : copySrc1,	[addr], pPatch, +7
+Addr : copySrc2,	[addr], pPatch, +C
+Addr : fnInitMode,	[offs], pPatch, +11
+
+Base : pPatch
+
+
+Copy : 0, copySrc1, 4
+Copy : 1, copySrc2, 4
+BindA : 2, modFlags
+BindF : 3, fnInitMode

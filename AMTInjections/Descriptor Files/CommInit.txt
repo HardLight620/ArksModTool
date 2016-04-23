@@ -1,0 +1,8 @@
+Addr : pPatch,		[addr], $code, +80
+
+
+Base : pPatch
+
+BindA : 0, $data
+BindA : 1, $pGetProcAddress
+BindA : 2, $pKernel32

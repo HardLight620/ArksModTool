@@ -1,0 +1,12 @@
+Addr : tag1,			[bytes], 8B CE 89 04 24 89 44 24 04 C7 44 24 08 00 00 80 BF 8B 55 08 F3 0F 10 1C 24 F3 0F
+Addr : tag2,			[bytes], 0F 28 D1 0F 28 E1 0F C6 D1 09 0F 28 D9 0F C6 D9 12 0F 28 F9 0F C6 F9 55 F3 0F 58 E2 66 0F EF D2
+Addr : pPatch,			[addr], tag1, -2
+Addr : modInputScale,	[addr], $data, +44
+Addr : pValue1,			[wptr], tag2, +3E
+Addr : pValue2,			[wptr], tag2, +51
+
+Base : pPatch
+
+BindA : 0, modInputScale
+BindA : 1, pValue1
+BindA : 2, pValue2

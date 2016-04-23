@@ -1,0 +1,9 @@
+Addr : tag,			[bytes], F3 0F 10 86 CC 00 00 00 0F 28 D8 83 78 30 00 74
+Addr : pPatch,		[addr], $code, +300
+Addr : modFlags,	[addr], $data, +41
+Addr : hookReturn,	[addr], tag, +8
+
+Base : pPatch
+
+BindA : 0, modFlags
+BindF : 1, hookReturn

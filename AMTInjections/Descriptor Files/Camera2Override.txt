@@ -1,0 +1,6 @@
+Addr : pPatch,		[addr], $code, +580
+Addr : pInData,		[addr], $data, +40
+
+Base : pPatch
+
+BindA : 0, pInData

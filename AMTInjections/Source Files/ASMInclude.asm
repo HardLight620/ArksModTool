@@ -1,0 +1,22 @@
+.MODEL FLAT, C
+.RADIX 16
+
+ASSUME eax: PTR DWORD
+ASSUME ebx: PTR DWORD
+ASSUME ecx: PTR DWORD
+ASSUME edx: PTR DWORD
+ASSUME esi: PTR DWORD
+ASSUME edi: PTR DWORD
+ASSUME ebp: PTR DWORD
+
+s32				textequ <DWORD PTR>
+s16				textequ <WORD PTR>
+s8				textequ <BYTE PTR>
+NO_SYMBOL		textequ <$+0CCCCCCD1>
+NO_ADDRESS		textequ <0CCCCCCCC>
+
+nopx MACRO n:=<1>
+REPEAT n
+nop
+ENDM
+ENDM

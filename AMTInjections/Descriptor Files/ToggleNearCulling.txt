@@ -1,0 +1,26 @@
+Addr : tag,			[bytes], F3 0F 5C DA 66 0F EF D2 F3 0F 10 D3 66 0F EF DB
+Addr : pPatch,		[addr], tag, +0
+Addr : modFlags,	[addr], $data, +41
+
+
+Base : pPatch
+
+
+BindA : 0, modFlags
+
+
+# Other Tags:
+# Tag:  5B 5F 5E 8B E5 5D C2 08 00 F7 46 28 00 01
+# Offs: +14A 
+#
+# Refcode:
+# jmp +08
+# movss xmm2, [5.00]
+# subss xmm3, xmm2
+# pxor xmm2, xmm2
+# movss xmm2, xmm3
+# pxor xmm3, xmm3
+# maxss xmm2, ?
+# movss xmm3, [esi+000000C8]
+# comiss xmm3, xmm2
+# ja +89

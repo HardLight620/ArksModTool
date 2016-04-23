@@ -1,0 +1,135 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Source Files\ASMExports.def" />
+  </ItemGroup>
+  <ItemGroup>
+    <MASM Include="Source Files\DisableAutoShowLog.asm" />
+    <MASM Include="Source Files\InputScaleAuto.asm" />
+    <MASM Include="Source Files\InputScaleNormal.asm" />
+    <MASM Include="Source Files\ToggleFarCulling.asm" />
+    <MASM Include="Source Files\ToggleFarCullingTerrain.asm" />
+    <MASM Include="Source Files\ToggleIntroVideo.asm" />
+    <MASM Include="Source Files\ToggleLOD.asm" />
+    <MASM Include="Source Files\ToggleLODHook.asm" />
+    <MASM Include="Source Files\ToggleNearCulling.asm" />
+    <MASM Include="Source Files\ToggleUpdateCulling.asm" />
+    <MASM Include="Source Files\UIHideECodes.asm" />
+    <MASM Include="Source Files\UIHideMenus.asm" />
+    <MASM Include="Source Files\UIHideScreenNotifications.asm" />
+    <MASM Include="Source Files\UIHideSubpalette.asm" />
+    <None Include="Source Files\AMTFlags.asm">
+      <FileType>Document</FileType>
+    </None>
+    <None Include="Source Files\ASMTemplate.asm">
+      <FileType>Document</FileType>
+    </None>
+    <MASM Include="Source Files\Camera1Override.asm" />
+    <MASM Include="Source Files\Camera2Override.asm" />
+    <MASM Include="Source Files\Camera2TransOverride.asm" />
+    <MASM Include="Source Files\CameraControlMain.asm" />
+    <MASM Include="Source Files\CameraControlMainHook.asm" />
+    <MASM Include="Source Files\CameraLandingOverride.asm" />
+    <MASM Include="Source Files\CommInit.asm" />
+    <None Include="Source Files\ASMInclude.asm">
+      <FileType>Document</FileType>
+    </None>
+    <MASM Include="Source Files\CommMain.asm" />
+    <MASM Include="Source Files\CommMainHook.asm" />
+    <MASM Include="Source Files\DisableECodeMapChange.asm" />
+    <MASM Include="Source Files\DllMain.asm">
+      <WarningLevel Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">2</WarningLevel>
+    </MASM>
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="Descriptor Files\Addresses.txt" />
+    <Text Include="Descriptor Files\Camera1Override.txt" />
+    <Text Include="Descriptor Files\Camera2Override.txt" />
+    <Text Include="Descriptor Files\Camera2TransOverride.txt" />
+    <Text Include="Descriptor Files\CameraControlMain.txt" />
+    <Text Include="Descriptor Files\CameraControlMainHook.txt" />
+    <Text Include="Descriptor Files\CameraLandingOverride.txt" />
+    <Text Include="Descriptor Files\CommInit.txt" />
+    <Text Include="Descriptor Files\CommMain.txt" />
+    <Text Include="Descriptor Files\CommMainHook.txt" />
+    <Text Include="Descriptor Files\DisableAutoShowLog.txt" />
+    <Text Include="Descriptor Files\DisableECodeMapChange.txt" />
+    <Text Include="Descriptor Files\InputScaleAuto.txt" />
+    <Text Include="Descriptor Files\InputScaleNormal.txt" />
+    <Text Include="Descriptor Files\ToggleFarCulling.txt" />
+    <Text Include="Descriptor Files\ToggleFarCullingTerrain.txt" />
+    <Text Include="Descriptor Files\ToggleIntroVideo.txt" />
+    <Text Include="Descriptor Files\ToggleLOD.txt" />
+    <Text Include="Descriptor Files\ToggleLODHook.txt" />
+    <Text Include="Descriptor Files\ToggleNearCulling.txt" />
+    <Text Include="Descriptor Files\ToggleUpdateCulling.txt" />
+    <Text Include="Descriptor Files\UIHideECodes.txt" />
+    <Text Include="Descriptor Files\UIHideMenus.txt" />
+    <Text Include="Descriptor Files\UIHideScreenNotifications.txt" />
+    <Text Include="Descriptor Files\UIHideSubpalette.txt" />
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{66F55628-A7CA-463C-9431-38F2261EE9BB}</ProjectGuid>
+    <RootNamespace>AMTInjections</RootNamespace>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v110</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+    <Import Project="$(VCTargetsPath)\BuildCustomizations\masm.props" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <CustomBuildAfterTargets>Build</CustomBuildAfterTargets>
+    <OutDir>$(SolutionDir)Build\$(Configuration)\AMTInjections\</OutDir>
+    <IntDir>$(ProjectDir)obj\$(Configuration)\</IntDir>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+    </ClCompile>
+    <Link>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <ModuleDefinitionFile>Source Files/ASMExports.def</ModuleDefinitionFile>
+      <EntryPointSymbol>DllMain</EntryPointSymbol>
+      <ImageHasSafeExceptionHandlers>false</ImageHasSafeExceptionHandlers>
+      <LinkTimeCodeGeneration>Default</LinkTimeCodeGeneration>
+    </Link>
+    <CustomBuildStep>
+      <Command>REM Force PostBuild target</Command>
+      <Outputs>dummy.txt</Outputs>
+      <TreatOutputAsContent>true</TreatOutputAsContent>
+    </CustomBuildStep>
+  </ItemDefinitionGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+    <Import Project="$(VCTargetsPath)\BuildCustomizations\masm.targets" />
+  </ImportGroup>
+  <PropertyGroup>
+    <AfterBuildCmd>"$(SolutionDir)Tools\PatchFileGenerator\PatchFileGenerator.exe" -no_console -no_wait -mkdir "-o=$(SolutionDir)Build\$(Configuration)\AMTPatchFiles\\" "-l=$(OutDir)AMTInjections.dll" "-m=$(SolutionDir)Tools\MemDump\pso2.mem" "$(ProjectDir)Descriptor Files\*.txt"</AfterBuildCmd>
+  </PropertyGroup>
+  <Target Name="PostBuild" AfterTargets="CustomBuildStep">
+    <Exec Command="$(AfterBuildCmd)" />
+  </Target>
+</Project>

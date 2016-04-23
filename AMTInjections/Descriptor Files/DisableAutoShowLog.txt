@@ -1,0 +1,11 @@
+Addr : tag,						[bytes], 00 00 00 00 5D C3 8D B4 26 00 00 00 00 55 8B E9 83 BD
+Addr : pPatch,					[addr], tag, +D
+Addr : copySrc,					[addr], pPatch, +5
+Addr : pLogWindowContext,		[wptr], pPatch, +E
+Addr : fnSetLogWindowVisible,	[offs], pPatch, +19
+
+Base : pPatch
+
+Copy : 0, copySrc, 4
+BindA : 1, pLogWindowContext
+BindF : 2, fnSetLogWindowVisible

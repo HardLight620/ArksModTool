@@ -1,0 +1,7 @@
+Addr : tag,			[bytes], 0F 84 BD 03 00 00 F2 0F 5A C9 50
+Addr : hook,		[addr], tag, +A
+Addr : hookFunc,	[addr], $code, 0
+
+Base : hook
+
+BindF : 0, hookFunc

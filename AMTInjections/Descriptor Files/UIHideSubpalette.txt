@@ -1,0 +1,16 @@
+Addr : tag,			[bytes], F7 D1 81 E1 80 00 00 00 C1 E9 07 EB 02 33 C9 8B
+Addr : pPatch,		[addr], tag, -13
+Addr : pCommFlags,	[addr], $data, +40
+Addr : copySrc1,	[addr], pPatch, +6
+Addr : copySrc2,	[addr], pPatch, +F
+Addr : copySrc3,	[addr], pPatch, +24
+Addr : copySrc4,	[addr], pPatch, +58
+
+Base : pPatch
+
+
+BindA : 0, pCommFlags
+Copy : 1, copySrc1, 4
+Copy : 2, copySrc2, 4
+Copy : 3, copySrc3, 4
+Copy : 4, copySrc4, 1
