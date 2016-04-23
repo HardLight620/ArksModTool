@@ -17,7 +17,7 @@ MemDumpTool.exe pso2.exe -o=../MemDump/pso2.mem
 ```
 Note that the tool must be run with administrator privileges or it will not be able to acquire the memory snapshot.
 
-Once a memory dump of pso2 has been acquired, the application may be built using regular Visual Studio build procedures.
+Once a memory dump of pso2 has been acquired and placed in the MemDump folder, the application may be built using regular Visual Studio build procedures.
 
 ## Terms of Distribution
 
