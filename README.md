@@ -4,14 +4,14 @@ A mod utility tool to provide various client-side game adjustments for Phantasy 
 
 This project is strictly the work of a fan and is not affiliated with Sega or any other game development organization.
 
-As a developer, I respect the rights administered to Sega as both the developer and publisher of the game and will cease development on this project immediately if requested to do so by an appropriate authority.
+As a developer, I respect the rights administered to Sega as both the developer and publisher of Phantasy Star Online 2 and will cease development on this project immediately if requested to do so by an appropriate authority.
 
 
 Jason Lim
 
 ## Build Instructions
 
-In order to build the application, it is necessary to acquire a memory dump of the unmodified pso2.exe process. This can be acquired by running the MemDumpTool in the tools folder while pso2 is running:
+In order to build the application, it is necessary to acquire a memory dump of the unmodified pso2 process. This can be acquired by running the MemDumpTool in the tools folder while pso2 is running:
 ```
 MemDumpTool.exe pso2.exe -o=../MemDump/pso2.mem
 ```
