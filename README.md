@@ -21,4 +21,4 @@ Once a memory dump of pso2 has been acquired and placed in the MemDump folder, t
 
 ## Terms of Distribution
 
-This software and source code is distributed reserving all rights under copyright law. While persmission is hereby granted to anyone acquiring this software to use, copy, modify, and distribute it either as a whole or as a part, it is requested that such activities be done so under the provision that they are in the interest of maintaining a healthy online player community in Phantasy Star Online 2.
+This software and source code are distributed reserving all rights under copyright law. While persmission is hereby granted to anyone acquiring this software to use, copy, modify, and distribute it either as a whole or as a part, it is requested that such activities be done so under the provision that they are in the interest of maintaining a healthy online player community in Phantasy Star Online 2.
