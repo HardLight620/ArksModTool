@@ -32,14 +32,14 @@ b1:	mov esi, NO_ADDRESS
 	mov edi,[esi+14]
 	lea eax, [esi+40]
 	push 00
-	push 60
+	push 80
 	push eax
 	push edi
 	push ebx
 	call dword ptr[ebp+04]		; ReadProcessMemory
 	lea eax, [esi+40]
-	lea eax, [eax+60]
-	lea ecx, [edi+60]
+	lea eax, [eax+80]
+	lea ecx, [edi+80]
 	mov [eax], 00000001
 	push 00
 	push 20
@@ -50,9 +50,12 @@ b1:	mov esi, NO_ADDRESS
 	push ebx
 	call dword ptr [ebp+0C]		; CloseHandle
 	nopx 5
-	nopx 5
+	nopx 5						; CameraControlMain
 d0:	popad
 b2:	call NO_SYMBOL				; UpdateGameState
+	push eax
+	nopx 5						; ColorAdjustments
+	pop eax
 	ret
 CommMain_End:
 

@@ -10,6 +10,8 @@
     <None Include="Source Files\ASMExports.def" />
   </ItemGroup>
   <ItemGroup>
+    <MASM Include="Source Files\ColorAdjustments.asm" />
+    <MASM Include="Source Files\ColorAdjustmentsHook.asm" />
     <MASM Include="Source Files\DisableAutoShowLog.asm" />
     <MASM Include="Source Files\InputScaleAuto.asm" />
     <MASM Include="Source Files\InputScaleNormal.asm" />

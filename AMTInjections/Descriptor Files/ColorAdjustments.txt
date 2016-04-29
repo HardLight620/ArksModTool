@@ -1,0 +1,15 @@
+Addr : tag,				[bytes], 81 E6 00 08 00 00 C1 EE 0B 89 74 24 34 8D 70 10
+
+Addr : pPatch,			[addr], $code, +600
+Addr : pData,			[addr], $data, +40
+Addr : pRenderSystem,	[wptr], tag, -12
+Addr : pIdentifier,		[wptr], tag, +1D
+
+Addr : fnBinarySearch,	[offs], tag, +23
+
+Base : pPatch
+
+BindA : 0, pData
+BindA : 1, pRenderSystem
+BindA : 2, pIdentifier
+BindF : 3, fnBinarySearch

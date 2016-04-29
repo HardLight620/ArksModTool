@@ -51,6 +51,14 @@ namespace ArksModTool
         public float ShooterCamPitch { get { return m_shooterCamPitch; } set { m_shooterCamPitch = value; } }
         public float ShooterCamHeight { get { return m_shooterCamHeight; } set { m_shooterCamHeight = value; } }
 
+        public bool CustomizeColors { get { return m_customizeColors; } set { m_customizeColors = value; } }
+        public float Brightness { get { return m_brightness; } set { m_brightness = value; } }
+        public float Contrast { get { return m_contrast; } set { m_contrast = value; } }
+        public float Saturation { get { return m_saturation; } set { m_saturation = value; } }
+        public float RedBalance { get { return m_redBalance; } set { m_redBalance = value; } }
+        public float GreenBalance { get { return m_greenBalance; } set { m_greenBalance = value; } }
+        public float BlueBalance { get { return m_blueBalance; } set { m_blueBalance = value; } }
+
         public bool MinimizeToTray { get { return m_minimizeToTray; } set { m_minimizeToTray = value; } }
         public bool CloseToTray { get { return m_closeToTray; } set { m_closeToTray = value; } }
 
@@ -87,6 +95,14 @@ namespace ArksModTool
         private float m_shooterCamYaw = -3.9f;
         private float m_shooterCamPitch = 0.0f;
         private float m_shooterCamHeight = 1.5f;
+
+        private bool m_customizeColors = false;
+        private float m_brightness = 0.0f;
+        private float m_contrast = 0.0f;
+        private float m_saturation = 0.0f;
+        private float m_redBalance = 0.0f;
+        private float m_blueBalance = 0.0f;
+        private float m_greenBalance = 0.0f;
 
         private bool m_minimizeToTray = false;
         private bool m_closeToTray = false;
@@ -133,6 +149,14 @@ namespace ArksModTool
             m_shooterCamPitch = 0.0f;
             m_shooterCamHeight = 1.5f;
 
+            m_customizeColors = false;
+            m_brightness = 0.0f;
+            m_contrast = 0.0f;
+            m_saturation = 0.0f;
+            m_redBalance = 0.0f;
+            m_blueBalance = 0.0f;
+            m_greenBalance = 0.0f;
+
             m_minimizeToTray = false;
             m_closeToTray = false;
         }
@@ -175,6 +199,14 @@ namespace ArksModTool
             settings.Add(string.Format("{0, -25} : {1}", "Shooter Cam Pitch", m_shooterCamPitch));
             settings.Add(string.Format("{0, -25} : {1}", "Shooter Cam Yaw", m_shooterCamYaw));
             settings.Add(string.Format("{0, -25} : {1}", "Shooter Cam Height", m_shooterCamHeight));
+
+            settings.Add(string.Format("{0, -25} : {1}", "Customize Colors", m_customizeColors));
+            settings.Add(string.Format("{0, -25} : {1}", "Brightness", m_brightness));
+            settings.Add(string.Format("{0, -25} : {1}", "Contrast", m_contrast));
+            settings.Add(string.Format("{0, -25} : {1}", "Saturation", m_saturation));
+            settings.Add(string.Format("{0, -25} : {1}", "Red Balance", m_redBalance));
+            settings.Add(string.Format("{0, -25} : {1}", "Green Balance", m_greenBalance));
+            settings.Add(string.Format("{0, -25} : {1}", "Blue Balance", m_blueBalance));
 
             settings.Add(string.Format("{0, -25} : {1}", "Minimize To Tray", m_minimizeToTray));
             settings.Add(string.Format("{0, -25} : {1}", "Close To Tray", m_closeToTray));
@@ -241,6 +273,14 @@ namespace ArksModTool
                         case "Shooter Cam Pitch":       float.TryParse(kvp.Value, out settings.m_shooterCamPitch); break;
                         case "Shooter Cam Yaw":         float.TryParse(kvp.Value, out settings.m_shooterCamYaw); break;
                         case "Shooter Cam Height":      float.TryParse(kvp.Value, out settings.m_shooterCamHeight); break;
+
+                        case "Customize Colors":        bool.TryParse(kvp.Value, out settings.m_customizeColors); break;
+                        case "Brightness":              float.TryParse(kvp.Value, out settings.m_brightness); break;
+                        case "Contrast":                float.TryParse(kvp.Value, out settings.m_contrast); break;
+                        case "Saturation":              float.TryParse(kvp.Value, out settings.m_saturation); break;
+                        case "Red Balance":             float.TryParse(kvp.Value, out settings.m_redBalance); break;
+                        case "Green Balance":           float.TryParse(kvp.Value, out settings.m_greenBalance); break;
+                        case "Blue Balance":            float.TryParse(kvp.Value, out settings.m_blueBalance); break;
 
                         case "Minimize To Tray":        bool.TryParse(kvp.Value, out settings.m_minimizeToTray); break;
                         case "Close To Tray":           bool.TryParse(kvp.Value, out settings.m_closeToTray); break;

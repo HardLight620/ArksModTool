@@ -37,8 +37,9 @@
             treeNode3});
             System.Windows.Forms.TreeNode treeNode5 = new System.Windows.Forms.TreeNode("Input");
             System.Windows.Forms.TreeNode treeNode6 = new System.Windows.Forms.TreeNode("UI");
-            System.Windows.Forms.TreeNode treeNode7 = new System.Windows.Forms.TreeNode("Preferences");
-            System.Windows.Forms.TreeNode treeNode8 = new System.Windows.Forms.TreeNode("Info");
+            System.Windows.Forms.TreeNode treeNode7 = new System.Windows.Forms.TreeNode("Colors");
+            System.Windows.Forms.TreeNode treeNode8 = new System.Windows.Forms.TreeNode("Preferences");
+            System.Windows.Forms.TreeNode treeNode9 = new System.Windows.Forms.TreeNode("Info");
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.lblStatus = new System.Windows.Forms.Label();
             this.ruler1 = new System.Windows.Forms.Label();
@@ -61,33 +62,6 @@
             this.chkDisableFarCulling = new System.Windows.Forms.CheckBox();
             this.chkDisableIntro = new System.Windows.Forms.CheckBox();
             this.chkDisableNearCulling = new System.Windows.Forms.CheckBox();
-            this.pageInput = new System.Windows.Forms.TabPage();
-            this.hkselToggleMode = new ArksModTool.HotkeySelector();
-            this.label10 = new System.Windows.Forms.Label();
-            this.labelRuler2 = new ArksModTool.LabelRuler();
-            this.numRunInputScale = new System.Windows.Forms.NumericUpDown();
-            this.label1 = new System.Windows.Forms.Label();
-            this.trackRunInputScale = new System.Windows.Forms.TrackBar();
-            this.numWalkInputScale = new System.Windows.Forms.NumericUpDown();
-            this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
-            this.radWalking = new System.Windows.Forms.RadioButton();
-            this.radRunning = new System.Windows.Forms.RadioButton();
-            this.label8 = new System.Windows.Forms.Label();
-            this.labelRuler1 = new ArksModTool.LabelRuler();
-            this.trackWalkInputScale = new System.Windows.Forms.TrackBar();
-            this.pageUI = new System.Windows.Forms.TabPage();
-            this.chkHideEmergencyCodes = new System.Windows.Forms.CheckBox();
-            this.chkHideScreenNotifications = new System.Windows.Forms.CheckBox();
-            this.hkselHideUI = new ArksModTool.HotkeySelector();
-            this.label2 = new System.Windows.Forms.Label();
-            this.labelRuler4 = new ArksModTool.LabelRuler();
-            this.chkHideAllUI = new System.Windows.Forms.CheckBox();
-            this.chkHideHud = new System.Windows.Forms.CheckBox();
-            this.labelRuler3 = new ArksModTool.LabelRuler();
-            this.chkHideCommandPalette = new System.Windows.Forms.CheckBox();
-            this.pageInfo = new System.Windows.Forms.TabPage();
-            this.linkProjectPage = new System.Windows.Forms.LinkLabel();
-            this.txtLog = new System.Windows.Forms.TextBox();
             this.pageCamera1 = new System.Windows.Forms.TabPage();
             this.btnCam1Reset = new System.Windows.Forms.Button();
             this.labelRuler10 = new ArksModTool.LabelRuler();
@@ -124,6 +98,62 @@
             this.labelRuler12 = new ArksModTool.LabelRuler();
             this.chkCam2Customize = new System.Windows.Forms.CheckBox();
             this.labelRuler11 = new ArksModTool.LabelRuler();
+            this.pageInput = new System.Windows.Forms.TabPage();
+            this.hkselToggleMode = new ArksModTool.HotkeySelector();
+            this.label10 = new System.Windows.Forms.Label();
+            this.labelRuler2 = new ArksModTool.LabelRuler();
+            this.numRunInputScale = new System.Windows.Forms.NumericUpDown();
+            this.label1 = new System.Windows.Forms.Label();
+            this.trackRunInputScale = new System.Windows.Forms.TrackBar();
+            this.numWalkInputScale = new System.Windows.Forms.NumericUpDown();
+            this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
+            this.radWalking = new System.Windows.Forms.RadioButton();
+            this.radRunning = new System.Windows.Forms.RadioButton();
+            this.label8 = new System.Windows.Forms.Label();
+            this.labelRuler1 = new ArksModTool.LabelRuler();
+            this.trackWalkInputScale = new System.Windows.Forms.TrackBar();
+            this.pageUI = new System.Windows.Forms.TabPage();
+            this.chkHideEmergencyCodes = new System.Windows.Forms.CheckBox();
+            this.chkHideScreenNotifications = new System.Windows.Forms.CheckBox();
+            this.hkselHideUI = new ArksModTool.HotkeySelector();
+            this.label2 = new System.Windows.Forms.Label();
+            this.labelRuler4 = new ArksModTool.LabelRuler();
+            this.chkHideAllUI = new System.Windows.Forms.CheckBox();
+            this.chkHideHud = new System.Windows.Forms.CheckBox();
+            this.labelRuler3 = new ArksModTool.LabelRuler();
+            this.chkHideCommandPalette = new System.Windows.Forms.CheckBox();
+            this.pageColors = new System.Windows.Forms.TabPage();
+            this.pnlCustomizeColors = new ArksModTool.BufferedPanel();
+            this.numBlueBalance = new System.Windows.Forms.NumericUpDown();
+            this.label21 = new System.Windows.Forms.Label();
+            this.trackBlueBalance = new System.Windows.Forms.TrackBar();
+            this.numGreenBalance = new System.Windows.Forms.NumericUpDown();
+            this.label20 = new System.Windows.Forms.Label();
+            this.trackGreenBalance = new System.Windows.Forms.TrackBar();
+            this.numRedBalance = new System.Windows.Forms.NumericUpDown();
+            this.label19 = new System.Windows.Forms.Label();
+            this.trackRedBalance = new System.Windows.Forms.TrackBar();
+            this.numSaturation = new System.Windows.Forms.NumericUpDown();
+            this.label18 = new System.Windows.Forms.Label();
+            this.trackSaturation = new System.Windows.Forms.TrackBar();
+            this.numContrast = new System.Windows.Forms.NumericUpDown();
+            this.label16 = new System.Windows.Forms.Label();
+            this.trackContrast = new System.Windows.Forms.TrackBar();
+            this.numBrightness = new System.Windows.Forms.NumericUpDown();
+            this.label17 = new System.Windows.Forms.Label();
+            this.trackBrightness = new System.Windows.Forms.TrackBar();
+            this.btnResetColors = new System.Windows.Forms.Button();
+            this.labelRuler15 = new ArksModTool.LabelRuler();
+            this.chkCustomizeColors = new System.Windows.Forms.CheckBox();
+            this.labelRuler16 = new ArksModTool.LabelRuler();
+            this.pagePreferences = new System.Windows.Forms.TabPage();
+            this.labelRuler14 = new ArksModTool.LabelRuler();
+            this.chkCloseToTray = new System.Windows.Forms.CheckBox();
+            this.chkMinimzeToTray = new System.Windows.Forms.CheckBox();
+            this.labelRuler13 = new ArksModTool.LabelRuler();
+            this.pageInfo = new System.Windows.Forms.TabPage();
+            this.linkProjectPage = new System.Windows.Forms.LinkLabel();
+            this.txtLog = new System.Windows.Forms.TextBox();
             this.pageFOV = new System.Windows.Forms.TabPage();
             this.label13 = new System.Windows.Forms.Label();
             this.numFovNPCTalk = new System.Windows.Forms.NumericUpDown();
@@ -136,24 +166,11 @@
             this.trackFovNormal = new System.Windows.Forms.TrackBar();
             this.labelRuler8 = new ArksModTool.LabelRuler();
             this.labelRuler7 = new ArksModTool.LabelRuler();
-            this.pagePreferences = new System.Windows.Forms.TabPage();
-            this.labelRuler14 = new ArksModTool.LabelRuler();
-            this.chkCloseToTray = new System.Windows.Forms.CheckBox();
-            this.chkMinimzeToTray = new System.Windows.Forms.CheckBox();
-            this.labelRuler13 = new ArksModTool.LabelRuler();
             this.pageBlank = new System.Windows.Forms.TabPage();
             this.contextMenuStrip1.SuspendLayout();
             this.popupPanel1.SuspendLayout();
             this.pageControl1.SuspendLayout();
             this.pageGeneral.SuspendLayout();
-            this.pageInput.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numRunInputScale)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.trackRunInputScale)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numWalkInputScale)).BeginInit();
-            this.tableLayoutPanel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.trackWalkInputScale)).BeginInit();
-            this.pageUI.SuspendLayout();
-            this.pageInfo.SuspendLayout();
             this.pageCamera1.SuspendLayout();
             this.pnlCam1Customize.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numCam1Height)).BeginInit();
@@ -174,6 +191,29 @@
             ((System.ComponentModel.ISupportInitialize)(this.trackCam2Z)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numCam2Y)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.trackCam2Y)).BeginInit();
+            this.pageInput.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numRunInputScale)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.trackRunInputScale)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numWalkInputScale)).BeginInit();
+            this.tableLayoutPanel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.trackWalkInputScale)).BeginInit();
+            this.pageUI.SuspendLayout();
+            this.pageColors.SuspendLayout();
+            this.pnlCustomizeColors.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numBlueBalance)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.trackBlueBalance)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numGreenBalance)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.trackGreenBalance)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numRedBalance)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.trackRedBalance)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numSaturation)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.trackSaturation)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numContrast)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.trackContrast)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numBrightness)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.trackBrightness)).BeginInit();
+            this.pagePreferences.SuspendLayout();
+            this.pageInfo.SuspendLayout();
             this.pageFOV.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numFovNPCTalk)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.trackFovNPCTalk)).BeginInit();
@@ -181,7 +221,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.trackFovTPS)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numFovNormal)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.trackFovNormal)).BeginInit();
-            this.pagePreferences.SuspendLayout();
             this.SuspendLayout();
             // 
             // lblStatus
@@ -241,19 +280,23 @@
             treeNode6.Name = "nodeUI";
             treeNode6.Tag = "pageUI";
             treeNode6.Text = "UI";
-            treeNode7.Name = "nodePreferences";
-            treeNode7.Tag = "pagePreferences";
-            treeNode7.Text = "Preferences";
-            treeNode8.Name = "nodeInfo";
-            treeNode8.Tag = "pageInfo";
-            treeNode8.Text = "Info";
+            treeNode7.Name = "nodeColors";
+            treeNode7.Tag = "pageColors";
+            treeNode7.Text = "Colors";
+            treeNode8.Name = "nodePreferences";
+            treeNode8.Tag = "pagePreferences";
+            treeNode8.Text = "Preferences";
+            treeNode9.Name = "nodeInfo";
+            treeNode9.Tag = "pageInfo";
+            treeNode9.Text = "Info";
             this.treeView1.Nodes.AddRange(new System.Windows.Forms.TreeNode[] {
             treeNode1,
             treeNode4,
             treeNode5,
             treeNode6,
             treeNode7,
-            treeNode8});
+            treeNode8,
+            treeNode9});
             this.treeView1.Scrollable = false;
             this.treeView1.ShowLines = false;
             this.treeView1.Size = new System.Drawing.Size(121, 269);
@@ -326,13 +369,14 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.pageControl1.Controls.Add(this.pageGeneral);
-            this.pageControl1.Controls.Add(this.pageInput);
-            this.pageControl1.Controls.Add(this.pageUI);
-            this.pageControl1.Controls.Add(this.pageInfo);
             this.pageControl1.Controls.Add(this.pageCamera1);
             this.pageControl1.Controls.Add(this.pageCamera2);
-            this.pageControl1.Controls.Add(this.pageFOV);
+            this.pageControl1.Controls.Add(this.pageInput);
+            this.pageControl1.Controls.Add(this.pageUI);
+            this.pageControl1.Controls.Add(this.pageColors);
             this.pageControl1.Controls.Add(this.pagePreferences);
+            this.pageControl1.Controls.Add(this.pageInfo);
+            this.pageControl1.Controls.Add(this.pageFOV);
             this.pageControl1.Controls.Add(this.pageBlank);
             this.pageControl1.Location = new System.Drawing.Point(139, 12);
             this.pageControl1.Name = "pageControl1";
@@ -426,355 +470,6 @@
             this.chkDisableNearCulling.TabIndex = 1;
             this.chkDisableNearCulling.Text = "Disable &Near Culling";
             this.chkDisableNearCulling.UseVisualStyleBackColor = true;
-            // 
-            // pageInput
-            // 
-            this.pageInput.Controls.Add(this.hkselToggleMode);
-            this.pageInput.Controls.Add(this.label10);
-            this.pageInput.Controls.Add(this.labelRuler2);
-            this.pageInput.Controls.Add(this.numRunInputScale);
-            this.pageInput.Controls.Add(this.label1);
-            this.pageInput.Controls.Add(this.trackRunInputScale);
-            this.pageInput.Controls.Add(this.numWalkInputScale);
-            this.pageInput.Controls.Add(this.tableLayoutPanel1);
-            this.pageInput.Controls.Add(this.label8);
-            this.pageInput.Controls.Add(this.labelRuler1);
-            this.pageInput.Controls.Add(this.trackWalkInputScale);
-            this.pageInput.Location = new System.Drawing.Point(0, 0);
-            this.pageInput.Name = "pageInput";
-            this.pageInput.Padding = new System.Windows.Forms.Padding(3);
-            this.pageInput.Size = new System.Drawing.Size(218, 251);
-            this.pageInput.TabIndex = 4;
-            this.pageInput.Text = "Inp";
-            // 
-            // hkselToggleMode
-            // 
-            this.hkselToggleMode.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.hkselToggleMode.Location = new System.Drawing.Point(80, 218);
-            this.hkselToggleMode.MinimumSize = new System.Drawing.Size(0, 21);
-            this.hkselToggleMode.Name = "hkselToggleMode";
-            this.hkselToggleMode.Size = new System.Drawing.Size(132, 21);
-            this.hkselToggleMode.TabIndex = 10;
-            // 
-            // label10
-            // 
-            this.label10.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(3, 223);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(70, 13);
-            this.label10.TabIndex = 9;
-            this.label10.Text = "Toggle Mode";
-            // 
-            // labelRuler2
-            // 
-            this.labelRuler2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.labelRuler2.Location = new System.Drawing.Point(0, 199);
-            this.labelRuler2.Name = "labelRuler2";
-            this.labelRuler2.Size = new System.Drawing.Size(218, 13);
-            this.labelRuler2.TabIndex = 8;
-            this.labelRuler2.Text = "Keys";
-            // 
-            // numRunInputScale
-            // 
-            this.numRunInputScale.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.numRunInputScale.DecimalPlaces = 2;
-            this.numRunInputScale.Increment = new decimal(new int[] {
-            5,
-            0,
-            0,
-            131072});
-            this.numRunInputScale.Location = new System.Drawing.Point(163, 132);
-            this.numRunInputScale.Maximum = new decimal(new int[] {
-            1,
-            0,
-            0,
-            0});
-            this.numRunInputScale.Name = "numRunInputScale";
-            this.numRunInputScale.Size = new System.Drawing.Size(49, 20);
-            this.numRunInputScale.TabIndex = 7;
-            this.numRunInputScale.Value = new decimal(new int[] {
-            10,
-            0,
-            0,
-            65536});
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(12, 116);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(84, 13);
-            this.label1.TabIndex = 5;
-            this.label1.Text = "&Run Input Scale";
-            // 
-            // trackRunInputScale
-            // 
-            this.trackRunInputScale.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.trackRunInputScale.AutoSize = false;
-            this.trackRunInputScale.Location = new System.Drawing.Point(6, 132);
-            this.trackRunInputScale.Maximum = 100;
-            this.trackRunInputScale.Name = "trackRunInputScale";
-            this.trackRunInputScale.Size = new System.Drawing.Size(151, 24);
-            this.trackRunInputScale.TabIndex = 6;
-            this.trackRunInputScale.TickStyle = System.Windows.Forms.TickStyle.None;
-            this.trackRunInputScale.Value = 100;
-            // 
-            // numWalkInputScale
-            // 
-            this.numWalkInputScale.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.numWalkInputScale.DecimalPlaces = 2;
-            this.numWalkInputScale.Increment = new decimal(new int[] {
-            5,
-            0,
-            0,
-            131072});
-            this.numWalkInputScale.Location = new System.Drawing.Point(163, 89);
-            this.numWalkInputScale.Maximum = new decimal(new int[] {
-            1,
-            0,
-            0,
-            0});
-            this.numWalkInputScale.Name = "numWalkInputScale";
-            this.numWalkInputScale.Size = new System.Drawing.Size(49, 20);
-            this.numWalkInputScale.TabIndex = 4;
-            this.numWalkInputScale.Value = new decimal(new int[] {
-            10,
-            0,
-            0,
-            65536});
-            // 
-            // tableLayoutPanel1
-            // 
-            this.tableLayoutPanel1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.tableLayoutPanel1.ColumnCount = 2;
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel1.Controls.Add(this.radWalking, 0, 0);
-            this.tableLayoutPanel1.Controls.Add(this.radRunning, 1, 0);
-            this.tableLayoutPanel1.Location = new System.Drawing.Point(6, 28);
-            this.tableLayoutPanel1.Name = "tableLayoutPanel1";
-            this.tableLayoutPanel1.RowCount = 1;
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 24F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(206, 24);
-            this.tableLayoutPanel1.TabIndex = 1;
-            // 
-            // radWalking
-            // 
-            this.radWalking.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.radWalking.Appearance = System.Windows.Forms.Appearance.Button;
-            this.radWalking.FlatStyle = System.Windows.Forms.FlatStyle.System;
-            this.radWalking.Location = new System.Drawing.Point(0, 0);
-            this.radWalking.Margin = new System.Windows.Forms.Padding(0, 0, 3, 0);
-            this.radWalking.Name = "radWalking";
-            this.radWalking.Size = new System.Drawing.Size(100, 24);
-            this.radWalking.TabIndex = 0;
-            this.radWalking.Text = "&Walking";
-            this.radWalking.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.radWalking.UseVisualStyleBackColor = true;
-            this.radWalking.CheckedChanged += new System.EventHandler(this.radWalkingRunning_CheckedChanged);
-            // 
-            // radRunning
-            // 
-            this.radRunning.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.radRunning.Appearance = System.Windows.Forms.Appearance.Button;
-            this.radRunning.Checked = true;
-            this.radRunning.FlatStyle = System.Windows.Forms.FlatStyle.System;
-            this.radRunning.Location = new System.Drawing.Point(106, 0);
-            this.radRunning.Margin = new System.Windows.Forms.Padding(3, 0, 0, 0);
-            this.radRunning.Name = "radRunning";
-            this.radRunning.Size = new System.Drawing.Size(100, 24);
-            this.radRunning.TabIndex = 1;
-            this.radRunning.TabStop = true;
-            this.radRunning.Text = "&Running";
-            this.radRunning.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.radRunning.UseVisualStyleBackColor = true;
-            this.radRunning.CheckedChanged += new System.EventHandler(this.radWalkingRunning_CheckedChanged);
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(12, 73);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(89, 13);
-            this.label8.TabIndex = 2;
-            this.label8.Text = "&Walk Input Scale";
-            // 
-            // labelRuler1
-            // 
-            this.labelRuler1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.labelRuler1.Location = new System.Drawing.Point(0, 0);
-            this.labelRuler1.Name = "labelRuler1";
-            this.labelRuler1.Size = new System.Drawing.Size(218, 13);
-            this.labelRuler1.TabIndex = 0;
-            this.labelRuler1.Text = "Movement";
-            // 
-            // trackWalkInputScale
-            // 
-            this.trackWalkInputScale.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.trackWalkInputScale.AutoSize = false;
-            this.trackWalkInputScale.Location = new System.Drawing.Point(6, 89);
-            this.trackWalkInputScale.Maximum = 100;
-            this.trackWalkInputScale.Name = "trackWalkInputScale";
-            this.trackWalkInputScale.Size = new System.Drawing.Size(151, 24);
-            this.trackWalkInputScale.TabIndex = 3;
-            this.trackWalkInputScale.TickStyle = System.Windows.Forms.TickStyle.None;
-            this.trackWalkInputScale.Value = 100;
-            // 
-            // pageUI
-            // 
-            this.pageUI.Controls.Add(this.chkHideEmergencyCodes);
-            this.pageUI.Controls.Add(this.chkHideScreenNotifications);
-            this.pageUI.Controls.Add(this.hkselHideUI);
-            this.pageUI.Controls.Add(this.label2);
-            this.pageUI.Controls.Add(this.labelRuler4);
-            this.pageUI.Controls.Add(this.chkHideAllUI);
-            this.pageUI.Controls.Add(this.chkHideHud);
-            this.pageUI.Controls.Add(this.labelRuler3);
-            this.pageUI.Controls.Add(this.chkHideCommandPalette);
-            this.pageUI.Location = new System.Drawing.Point(0, 0);
-            this.pageUI.Name = "pageUI";
-            this.pageUI.Size = new System.Drawing.Size(218, 251);
-            this.pageUI.TabIndex = 5;
-            this.pageUI.Text = "UI";
-            // 
-            // chkHideEmergencyCodes
-            // 
-            this.chkHideEmergencyCodes.AutoSize = true;
-            this.chkHideEmergencyCodes.Location = new System.Drawing.Point(20, 93);
-            this.chkHideEmergencyCodes.Name = "chkHideEmergencyCodes";
-            this.chkHideEmergencyCodes.Size = new System.Drawing.Size(137, 17);
-            this.chkHideEmergencyCodes.TabIndex = 4;
-            this.chkHideEmergencyCodes.Text = "Hide &Emergency Codes";
-            this.chkHideEmergencyCodes.UseVisualStyleBackColor = true;
-            // 
-            // chkHideScreenNotifications
-            // 
-            this.chkHideScreenNotifications.AutoSize = true;
-            this.chkHideScreenNotifications.Location = new System.Drawing.Point(20, 70);
-            this.chkHideScreenNotifications.Name = "chkHideScreenNotifications";
-            this.chkHideScreenNotifications.Size = new System.Drawing.Size(146, 17);
-            this.chkHideScreenNotifications.TabIndex = 3;
-            this.chkHideScreenNotifications.Text = "Hide &Screen Notifications";
-            this.chkHideScreenNotifications.UseVisualStyleBackColor = true;
-            // 
-            // hkselHideUI
-            // 
-            this.hkselHideUI.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.hkselHideUI.Location = new System.Drawing.Point(80, 218);
-            this.hkselHideUI.MinimumSize = new System.Drawing.Size(0, 21);
-            this.hkselHideUI.Name = "hkselHideUI";
-            this.hkselHideUI.Size = new System.Drawing.Size(132, 21);
-            this.hkselHideUI.TabIndex = 6;
-            // 
-            // label2
-            // 
-            this.label2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(3, 223);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(57, 13);
-            this.label2.TabIndex = 5;
-            this.label2.Text = "Hide All UI";
-            // 
-            // labelRuler4
-            // 
-            this.labelRuler4.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.labelRuler4.Location = new System.Drawing.Point(0, 199);
-            this.labelRuler4.Name = "labelRuler4";
-            this.labelRuler4.Size = new System.Drawing.Size(218, 13);
-            this.labelRuler4.TabIndex = 4;
-            this.labelRuler4.Text = "Keys";
-            // 
-            // chkHideAllUI
-            // 
-            this.chkHideAllUI.AutoSize = true;
-            this.chkHideAllUI.Location = new System.Drawing.Point(20, 24);
-            this.chkHideAllUI.Name = "chkHideAllUI";
-            this.chkHideAllUI.Size = new System.Drawing.Size(62, 17);
-            this.chkHideAllUI.TabIndex = 1;
-            this.chkHideAllUI.Text = "Hide &All";
-            this.chkHideAllUI.UseVisualStyleBackColor = true;
-            // 
-            // chkHideHud
-            // 
-            this.chkHideHud.AutoSize = true;
-            this.chkHideHud.Location = new System.Drawing.Point(20, 176);
-            this.chkHideHud.Name = "chkHideHud";
-            this.chkHideHud.Size = new System.Drawing.Size(71, 17);
-            this.chkHideHud.TabIndex = 0;
-            this.chkHideHud.Text = "Hide &Hud";
-            this.chkHideHud.UseVisualStyleBackColor = true;
-            this.chkHideHud.Visible = false;
-            // 
-            // labelRuler3
-            // 
-            this.labelRuler3.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.labelRuler3.Location = new System.Drawing.Point(0, 0);
-            this.labelRuler3.Name = "labelRuler3";
-            this.labelRuler3.Size = new System.Drawing.Size(218, 13);
-            this.labelRuler3.TabIndex = 0;
-            this.labelRuler3.Text = "UI Adjustments";
-            // 
-            // chkHideCommandPalette
-            // 
-            this.chkHideCommandPalette.AutoSize = true;
-            this.chkHideCommandPalette.Location = new System.Drawing.Point(20, 47);
-            this.chkHideCommandPalette.Name = "chkHideCommandPalette";
-            this.chkHideCommandPalette.Size = new System.Drawing.Size(134, 17);
-            this.chkHideCommandPalette.TabIndex = 2;
-            this.chkHideCommandPalette.Text = "Hide &Command Palette";
-            this.chkHideCommandPalette.UseVisualStyleBackColor = true;
-            // 
-            // pageInfo
-            // 
-            this.pageInfo.Controls.Add(this.linkProjectPage);
-            this.pageInfo.Controls.Add(this.txtLog);
-            this.pageInfo.Location = new System.Drawing.Point(0, 0);
-            this.pageInfo.Name = "pageInfo";
-            this.pageInfo.Size = new System.Drawing.Size(218, 251);
-            this.pageInfo.TabIndex = 3;
-            this.pageInfo.Text = "Info";
-            // 
-            // linkProjectPage
-            // 
-            this.linkProjectPage.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.linkProjectPage.AutoSize = true;
-            this.linkProjectPage.Location = new System.Drawing.Point(153, 238);
-            this.linkProjectPage.Name = "linkProjectPage";
-            this.linkProjectPage.Size = new System.Drawing.Size(68, 13);
-            this.linkProjectPage.TabIndex = 1;
-            this.linkProjectPage.TabStop = true;
-            this.linkProjectPage.Text = "Project Page";
-            this.linkProjectPage.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkProjectPage_LinkClicked);
-            // 
-            // txtLog
-            // 
-            this.txtLog.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtLog.BackColor = System.Drawing.SystemColors.Window;
-            this.txtLog.Font = new System.Drawing.Font("Consolas", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtLog.Location = new System.Drawing.Point(0, 0);
-            this.txtLog.Multiline = true;
-            this.txtLog.Name = "txtLog";
-            this.txtLog.ReadOnly = true;
-            this.txtLog.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.txtLog.Size = new System.Drawing.Size(218, 235);
-            this.txtLog.TabIndex = 0;
-            this.txtLog.WordWrap = false;
             // 
             // pageCamera1
             // 
@@ -1293,6 +988,763 @@
             this.labelRuler11.TabIndex = 0;
             this.labelRuler11.Text = "Shooter View";
             // 
+            // pageInput
+            // 
+            this.pageInput.Controls.Add(this.hkselToggleMode);
+            this.pageInput.Controls.Add(this.label10);
+            this.pageInput.Controls.Add(this.labelRuler2);
+            this.pageInput.Controls.Add(this.numRunInputScale);
+            this.pageInput.Controls.Add(this.label1);
+            this.pageInput.Controls.Add(this.trackRunInputScale);
+            this.pageInput.Controls.Add(this.numWalkInputScale);
+            this.pageInput.Controls.Add(this.tableLayoutPanel1);
+            this.pageInput.Controls.Add(this.label8);
+            this.pageInput.Controls.Add(this.labelRuler1);
+            this.pageInput.Controls.Add(this.trackWalkInputScale);
+            this.pageInput.Location = new System.Drawing.Point(0, 0);
+            this.pageInput.Name = "pageInput";
+            this.pageInput.Padding = new System.Windows.Forms.Padding(3);
+            this.pageInput.Size = new System.Drawing.Size(218, 251);
+            this.pageInput.TabIndex = 4;
+            this.pageInput.Text = "Inp";
+            // 
+            // hkselToggleMode
+            // 
+            this.hkselToggleMode.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.hkselToggleMode.Location = new System.Drawing.Point(80, 218);
+            this.hkselToggleMode.MinimumSize = new System.Drawing.Size(0, 21);
+            this.hkselToggleMode.Name = "hkselToggleMode";
+            this.hkselToggleMode.Size = new System.Drawing.Size(132, 21);
+            this.hkselToggleMode.TabIndex = 10;
+            // 
+            // label10
+            // 
+            this.label10.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.label10.AutoSize = true;
+            this.label10.Location = new System.Drawing.Point(3, 223);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(70, 13);
+            this.label10.TabIndex = 9;
+            this.label10.Text = "Toggle Mode";
+            // 
+            // labelRuler2
+            // 
+            this.labelRuler2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.labelRuler2.Location = new System.Drawing.Point(0, 199);
+            this.labelRuler2.Name = "labelRuler2";
+            this.labelRuler2.Size = new System.Drawing.Size(218, 13);
+            this.labelRuler2.TabIndex = 8;
+            this.labelRuler2.Text = "Keys";
+            // 
+            // numRunInputScale
+            // 
+            this.numRunInputScale.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.numRunInputScale.DecimalPlaces = 2;
+            this.numRunInputScale.Increment = new decimal(new int[] {
+            5,
+            0,
+            0,
+            131072});
+            this.numRunInputScale.Location = new System.Drawing.Point(163, 132);
+            this.numRunInputScale.Maximum = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            this.numRunInputScale.Name = "numRunInputScale";
+            this.numRunInputScale.Size = new System.Drawing.Size(49, 20);
+            this.numRunInputScale.TabIndex = 7;
+            this.numRunInputScale.Value = new decimal(new int[] {
+            10,
+            0,
+            0,
+            65536});
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(12, 116);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(84, 13);
+            this.label1.TabIndex = 5;
+            this.label1.Text = "&Run Input Scale";
+            // 
+            // trackRunInputScale
+            // 
+            this.trackRunInputScale.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.trackRunInputScale.AutoSize = false;
+            this.trackRunInputScale.Location = new System.Drawing.Point(6, 132);
+            this.trackRunInputScale.Maximum = 100;
+            this.trackRunInputScale.Name = "trackRunInputScale";
+            this.trackRunInputScale.Size = new System.Drawing.Size(151, 24);
+            this.trackRunInputScale.TabIndex = 6;
+            this.trackRunInputScale.TickStyle = System.Windows.Forms.TickStyle.None;
+            this.trackRunInputScale.Value = 100;
+            // 
+            // numWalkInputScale
+            // 
+            this.numWalkInputScale.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.numWalkInputScale.DecimalPlaces = 2;
+            this.numWalkInputScale.Increment = new decimal(new int[] {
+            5,
+            0,
+            0,
+            131072});
+            this.numWalkInputScale.Location = new System.Drawing.Point(163, 89);
+            this.numWalkInputScale.Maximum = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            this.numWalkInputScale.Name = "numWalkInputScale";
+            this.numWalkInputScale.Size = new System.Drawing.Size(49, 20);
+            this.numWalkInputScale.TabIndex = 4;
+            this.numWalkInputScale.Value = new decimal(new int[] {
+            10,
+            0,
+            0,
+            65536});
+            // 
+            // tableLayoutPanel1
+            // 
+            this.tableLayoutPanel1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.tableLayoutPanel1.ColumnCount = 2;
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel1.Controls.Add(this.radWalking, 0, 0);
+            this.tableLayoutPanel1.Controls.Add(this.radRunning, 1, 0);
+            this.tableLayoutPanel1.Location = new System.Drawing.Point(6, 28);
+            this.tableLayoutPanel1.Name = "tableLayoutPanel1";
+            this.tableLayoutPanel1.RowCount = 1;
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 24F));
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(206, 24);
+            this.tableLayoutPanel1.TabIndex = 1;
+            // 
+            // radWalking
+            // 
+            this.radWalking.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.radWalking.Appearance = System.Windows.Forms.Appearance.Button;
+            this.radWalking.FlatStyle = System.Windows.Forms.FlatStyle.System;
+            this.radWalking.Location = new System.Drawing.Point(0, 0);
+            this.radWalking.Margin = new System.Windows.Forms.Padding(0, 0, 3, 0);
+            this.radWalking.Name = "radWalking";
+            this.radWalking.Size = new System.Drawing.Size(100, 24);
+            this.radWalking.TabIndex = 0;
+            this.radWalking.Text = "&Walking";
+            this.radWalking.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.radWalking.UseVisualStyleBackColor = true;
+            this.radWalking.CheckedChanged += new System.EventHandler(this.radWalkingRunning_CheckedChanged);
+            // 
+            // radRunning
+            // 
+            this.radRunning.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.radRunning.Appearance = System.Windows.Forms.Appearance.Button;
+            this.radRunning.Checked = true;
+            this.radRunning.FlatStyle = System.Windows.Forms.FlatStyle.System;
+            this.radRunning.Location = new System.Drawing.Point(106, 0);
+            this.radRunning.Margin = new System.Windows.Forms.Padding(3, 0, 0, 0);
+            this.radRunning.Name = "radRunning";
+            this.radRunning.Size = new System.Drawing.Size(100, 24);
+            this.radRunning.TabIndex = 1;
+            this.radRunning.TabStop = true;
+            this.radRunning.Text = "&Running";
+            this.radRunning.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.radRunning.UseVisualStyleBackColor = true;
+            this.radRunning.CheckedChanged += new System.EventHandler(this.radWalkingRunning_CheckedChanged);
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(12, 73);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(89, 13);
+            this.label8.TabIndex = 2;
+            this.label8.Text = "&Walk Input Scale";
+            // 
+            // labelRuler1
+            // 
+            this.labelRuler1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.labelRuler1.Location = new System.Drawing.Point(0, 0);
+            this.labelRuler1.Name = "labelRuler1";
+            this.labelRuler1.Size = new System.Drawing.Size(218, 13);
+            this.labelRuler1.TabIndex = 0;
+            this.labelRuler1.Text = "Movement";
+            // 
+            // trackWalkInputScale
+            // 
+            this.trackWalkInputScale.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.trackWalkInputScale.AutoSize = false;
+            this.trackWalkInputScale.Location = new System.Drawing.Point(6, 89);
+            this.trackWalkInputScale.Maximum = 100;
+            this.trackWalkInputScale.Name = "trackWalkInputScale";
+            this.trackWalkInputScale.Size = new System.Drawing.Size(151, 24);
+            this.trackWalkInputScale.TabIndex = 3;
+            this.trackWalkInputScale.TickStyle = System.Windows.Forms.TickStyle.None;
+            this.trackWalkInputScale.Value = 100;
+            // 
+            // pageUI
+            // 
+            this.pageUI.Controls.Add(this.chkHideEmergencyCodes);
+            this.pageUI.Controls.Add(this.chkHideScreenNotifications);
+            this.pageUI.Controls.Add(this.hkselHideUI);
+            this.pageUI.Controls.Add(this.label2);
+            this.pageUI.Controls.Add(this.labelRuler4);
+            this.pageUI.Controls.Add(this.chkHideAllUI);
+            this.pageUI.Controls.Add(this.chkHideHud);
+            this.pageUI.Controls.Add(this.labelRuler3);
+            this.pageUI.Controls.Add(this.chkHideCommandPalette);
+            this.pageUI.Location = new System.Drawing.Point(0, 0);
+            this.pageUI.Name = "pageUI";
+            this.pageUI.Size = new System.Drawing.Size(218, 251);
+            this.pageUI.TabIndex = 5;
+            this.pageUI.Text = "UI";
+            // 
+            // chkHideEmergencyCodes
+            // 
+            this.chkHideEmergencyCodes.AutoSize = true;
+            this.chkHideEmergencyCodes.Location = new System.Drawing.Point(20, 93);
+            this.chkHideEmergencyCodes.Name = "chkHideEmergencyCodes";
+            this.chkHideEmergencyCodes.Size = new System.Drawing.Size(137, 17);
+            this.chkHideEmergencyCodes.TabIndex = 4;
+            this.chkHideEmergencyCodes.Text = "Hide &Emergency Codes";
+            this.chkHideEmergencyCodes.UseVisualStyleBackColor = true;
+            // 
+            // chkHideScreenNotifications
+            // 
+            this.chkHideScreenNotifications.AutoSize = true;
+            this.chkHideScreenNotifications.Location = new System.Drawing.Point(20, 70);
+            this.chkHideScreenNotifications.Name = "chkHideScreenNotifications";
+            this.chkHideScreenNotifications.Size = new System.Drawing.Size(146, 17);
+            this.chkHideScreenNotifications.TabIndex = 3;
+            this.chkHideScreenNotifications.Text = "Hide &Screen Notifications";
+            this.chkHideScreenNotifications.UseVisualStyleBackColor = true;
+            // 
+            // hkselHideUI
+            // 
+            this.hkselHideUI.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.hkselHideUI.Location = new System.Drawing.Point(80, 218);
+            this.hkselHideUI.MinimumSize = new System.Drawing.Size(0, 21);
+            this.hkselHideUI.Name = "hkselHideUI";
+            this.hkselHideUI.Size = new System.Drawing.Size(132, 21);
+            this.hkselHideUI.TabIndex = 6;
+            // 
+            // label2
+            // 
+            this.label2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(3, 223);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(57, 13);
+            this.label2.TabIndex = 5;
+            this.label2.Text = "Hide All UI";
+            // 
+            // labelRuler4
+            // 
+            this.labelRuler4.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.labelRuler4.Location = new System.Drawing.Point(0, 199);
+            this.labelRuler4.Name = "labelRuler4";
+            this.labelRuler4.Size = new System.Drawing.Size(218, 13);
+            this.labelRuler4.TabIndex = 4;
+            this.labelRuler4.Text = "Keys";
+            // 
+            // chkHideAllUI
+            // 
+            this.chkHideAllUI.AutoSize = true;
+            this.chkHideAllUI.Location = new System.Drawing.Point(20, 24);
+            this.chkHideAllUI.Name = "chkHideAllUI";
+            this.chkHideAllUI.Size = new System.Drawing.Size(62, 17);
+            this.chkHideAllUI.TabIndex = 1;
+            this.chkHideAllUI.Text = "Hide &All";
+            this.chkHideAllUI.UseVisualStyleBackColor = true;
+            // 
+            // chkHideHud
+            // 
+            this.chkHideHud.AutoSize = true;
+            this.chkHideHud.Location = new System.Drawing.Point(20, 176);
+            this.chkHideHud.Name = "chkHideHud";
+            this.chkHideHud.Size = new System.Drawing.Size(71, 17);
+            this.chkHideHud.TabIndex = 0;
+            this.chkHideHud.Text = "Hide &Hud";
+            this.chkHideHud.UseVisualStyleBackColor = true;
+            this.chkHideHud.Visible = false;
+            // 
+            // labelRuler3
+            // 
+            this.labelRuler3.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.labelRuler3.Location = new System.Drawing.Point(0, 0);
+            this.labelRuler3.Name = "labelRuler3";
+            this.labelRuler3.Size = new System.Drawing.Size(218, 13);
+            this.labelRuler3.TabIndex = 0;
+            this.labelRuler3.Text = "UI Adjustments";
+            // 
+            // chkHideCommandPalette
+            // 
+            this.chkHideCommandPalette.AutoSize = true;
+            this.chkHideCommandPalette.Location = new System.Drawing.Point(20, 47);
+            this.chkHideCommandPalette.Name = "chkHideCommandPalette";
+            this.chkHideCommandPalette.Size = new System.Drawing.Size(134, 17);
+            this.chkHideCommandPalette.TabIndex = 2;
+            this.chkHideCommandPalette.Text = "Hide &Command Palette";
+            this.chkHideCommandPalette.UseVisualStyleBackColor = true;
+            // 
+            // pageColors
+            // 
+            this.pageColors.Controls.Add(this.pnlCustomizeColors);
+            this.pageColors.Controls.Add(this.btnResetColors);
+            this.pageColors.Controls.Add(this.labelRuler15);
+            this.pageColors.Controls.Add(this.chkCustomizeColors);
+            this.pageColors.Controls.Add(this.labelRuler16);
+            this.pageColors.Location = new System.Drawing.Point(0, 0);
+            this.pageColors.Name = "pageColors";
+            this.pageColors.Size = new System.Drawing.Size(218, 251);
+            this.pageColors.TabIndex = 10;
+            this.pageColors.Text = "Colors";
+            // 
+            // pnlCustomizeColors
+            // 
+            this.pnlCustomizeColors.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.pnlCustomizeColors.Controls.Add(this.numBlueBalance);
+            this.pnlCustomizeColors.Controls.Add(this.label21);
+            this.pnlCustomizeColors.Controls.Add(this.trackBlueBalance);
+            this.pnlCustomizeColors.Controls.Add(this.numGreenBalance);
+            this.pnlCustomizeColors.Controls.Add(this.label20);
+            this.pnlCustomizeColors.Controls.Add(this.trackGreenBalance);
+            this.pnlCustomizeColors.Controls.Add(this.numRedBalance);
+            this.pnlCustomizeColors.Controls.Add(this.label19);
+            this.pnlCustomizeColors.Controls.Add(this.trackRedBalance);
+            this.pnlCustomizeColors.Controls.Add(this.numSaturation);
+            this.pnlCustomizeColors.Controls.Add(this.label18);
+            this.pnlCustomizeColors.Controls.Add(this.trackSaturation);
+            this.pnlCustomizeColors.Controls.Add(this.numContrast);
+            this.pnlCustomizeColors.Controls.Add(this.label16);
+            this.pnlCustomizeColors.Controls.Add(this.trackContrast);
+            this.pnlCustomizeColors.Controls.Add(this.numBrightness);
+            this.pnlCustomizeColors.Controls.Add(this.label17);
+            this.pnlCustomizeColors.Controls.Add(this.trackBrightness);
+            this.pnlCustomizeColors.Location = new System.Drawing.Point(0, 78);
+            this.pnlCustomizeColors.Name = "pnlCustomizeColors";
+            this.pnlCustomizeColors.Size = new System.Drawing.Size(218, 170);
+            this.pnlCustomizeColors.TabIndex = 4;
+            // 
+            // numBlueBalance
+            // 
+            this.numBlueBalance.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.numBlueBalance.DecimalPlaces = 2;
+            this.numBlueBalance.Increment = new decimal(new int[] {
+            1,
+            0,
+            0,
+            65536});
+            this.numBlueBalance.Location = new System.Drawing.Point(163, 138);
+            this.numBlueBalance.Maximum = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            this.numBlueBalance.Minimum = new decimal(new int[] {
+            1,
+            0,
+            0,
+            -2147483648});
+            this.numBlueBalance.Name = "numBlueBalance";
+            this.numBlueBalance.Size = new System.Drawing.Size(49, 20);
+            this.numBlueBalance.TabIndex = 17;
+            // 
+            // label21
+            // 
+            this.label21.AutoSize = true;
+            this.label21.Location = new System.Drawing.Point(6, 140);
+            this.label21.Name = "label21";
+            this.label21.Size = new System.Drawing.Size(28, 13);
+            this.label21.TabIndex = 15;
+            this.label21.Text = "Bl&ue";
+            // 
+            // trackBlueBalance
+            // 
+            this.trackBlueBalance.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.trackBlueBalance.AutoSize = false;
+            this.trackBlueBalance.Location = new System.Drawing.Point(56, 138);
+            this.trackBlueBalance.Maximum = 100;
+            this.trackBlueBalance.Minimum = -100;
+            this.trackBlueBalance.Name = "trackBlueBalance";
+            this.trackBlueBalance.Size = new System.Drawing.Size(108, 24);
+            this.trackBlueBalance.TabIndex = 16;
+            this.trackBlueBalance.TickStyle = System.Windows.Forms.TickStyle.None;
+            // 
+            // numGreenBalance
+            // 
+            this.numGreenBalance.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.numGreenBalance.DecimalPlaces = 2;
+            this.numGreenBalance.Increment = new decimal(new int[] {
+            1,
+            0,
+            0,
+            65536});
+            this.numGreenBalance.Location = new System.Drawing.Point(163, 112);
+            this.numGreenBalance.Maximum = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            this.numGreenBalance.Minimum = new decimal(new int[] {
+            1,
+            0,
+            0,
+            -2147483648});
+            this.numGreenBalance.Name = "numGreenBalance";
+            this.numGreenBalance.Size = new System.Drawing.Size(49, 20);
+            this.numGreenBalance.TabIndex = 14;
+            // 
+            // label20
+            // 
+            this.label20.AutoSize = true;
+            this.label20.Location = new System.Drawing.Point(6, 114);
+            this.label20.Name = "label20";
+            this.label20.Size = new System.Drawing.Size(36, 13);
+            this.label20.TabIndex = 12;
+            this.label20.Text = "&Green";
+            // 
+            // trackGreenBalance
+            // 
+            this.trackGreenBalance.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.trackGreenBalance.AutoSize = false;
+            this.trackGreenBalance.Location = new System.Drawing.Point(56, 112);
+            this.trackGreenBalance.Maximum = 100;
+            this.trackGreenBalance.Minimum = -100;
+            this.trackGreenBalance.Name = "trackGreenBalance";
+            this.trackGreenBalance.Size = new System.Drawing.Size(108, 24);
+            this.trackGreenBalance.TabIndex = 13;
+            this.trackGreenBalance.TickStyle = System.Windows.Forms.TickStyle.None;
+            // 
+            // numRedBalance
+            // 
+            this.numRedBalance.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.numRedBalance.DecimalPlaces = 2;
+            this.numRedBalance.Increment = new decimal(new int[] {
+            1,
+            0,
+            0,
+            65536});
+            this.numRedBalance.Location = new System.Drawing.Point(163, 86);
+            this.numRedBalance.Maximum = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            this.numRedBalance.Minimum = new decimal(new int[] {
+            1,
+            0,
+            0,
+            -2147483648});
+            this.numRedBalance.Name = "numRedBalance";
+            this.numRedBalance.Size = new System.Drawing.Size(49, 20);
+            this.numRedBalance.TabIndex = 11;
+            // 
+            // label19
+            // 
+            this.label19.AutoSize = true;
+            this.label19.Location = new System.Drawing.Point(6, 88);
+            this.label19.Name = "label19";
+            this.label19.Size = new System.Drawing.Size(27, 13);
+            this.label19.TabIndex = 9;
+            this.label19.Text = "R&ed";
+            // 
+            // trackRedBalance
+            // 
+            this.trackRedBalance.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.trackRedBalance.AutoSize = false;
+            this.trackRedBalance.Location = new System.Drawing.Point(56, 86);
+            this.trackRedBalance.Maximum = 100;
+            this.trackRedBalance.Minimum = -100;
+            this.trackRedBalance.Name = "trackRedBalance";
+            this.trackRedBalance.Size = new System.Drawing.Size(108, 24);
+            this.trackRedBalance.TabIndex = 10;
+            this.trackRedBalance.TickStyle = System.Windows.Forms.TickStyle.None;
+            // 
+            // numSaturation
+            // 
+            this.numSaturation.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.numSaturation.DecimalPlaces = 2;
+            this.numSaturation.Increment = new decimal(new int[] {
+            1,
+            0,
+            0,
+            65536});
+            this.numSaturation.Location = new System.Drawing.Point(163, 56);
+            this.numSaturation.Maximum = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            this.numSaturation.Minimum = new decimal(new int[] {
+            1,
+            0,
+            0,
+            -2147483648});
+            this.numSaturation.Name = "numSaturation";
+            this.numSaturation.Size = new System.Drawing.Size(49, 20);
+            this.numSaturation.TabIndex = 8;
+            // 
+            // label18
+            // 
+            this.label18.AutoSize = true;
+            this.label18.Location = new System.Drawing.Point(6, 58);
+            this.label18.Name = "label18";
+            this.label18.Size = new System.Drawing.Size(55, 13);
+            this.label18.TabIndex = 6;
+            this.label18.Text = "&Saturation";
+            // 
+            // trackSaturation
+            // 
+            this.trackSaturation.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.trackSaturation.AutoSize = false;
+            this.trackSaturation.Location = new System.Drawing.Point(56, 56);
+            this.trackSaturation.Maximum = 100;
+            this.trackSaturation.Minimum = -100;
+            this.trackSaturation.Name = "trackSaturation";
+            this.trackSaturation.Size = new System.Drawing.Size(108, 24);
+            this.trackSaturation.TabIndex = 7;
+            this.trackSaturation.TickStyle = System.Windows.Forms.TickStyle.None;
+            // 
+            // numContrast
+            // 
+            this.numContrast.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.numContrast.DecimalPlaces = 2;
+            this.numContrast.Increment = new decimal(new int[] {
+            1,
+            0,
+            0,
+            65536});
+            this.numContrast.Location = new System.Drawing.Point(163, 30);
+            this.numContrast.Maximum = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            this.numContrast.Minimum = new decimal(new int[] {
+            1,
+            0,
+            0,
+            -2147483648});
+            this.numContrast.Name = "numContrast";
+            this.numContrast.Size = new System.Drawing.Size(49, 20);
+            this.numContrast.TabIndex = 5;
+            // 
+            // label16
+            // 
+            this.label16.AutoSize = true;
+            this.label16.Location = new System.Drawing.Point(6, 32);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(46, 13);
+            this.label16.TabIndex = 3;
+            this.label16.Text = "C&ontrast";
+            // 
+            // trackContrast
+            // 
+            this.trackContrast.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.trackContrast.AutoSize = false;
+            this.trackContrast.Location = new System.Drawing.Point(56, 30);
+            this.trackContrast.Maximum = 100;
+            this.trackContrast.Minimum = -100;
+            this.trackContrast.Name = "trackContrast";
+            this.trackContrast.Size = new System.Drawing.Size(108, 24);
+            this.trackContrast.TabIndex = 4;
+            this.trackContrast.TickStyle = System.Windows.Forms.TickStyle.None;
+            // 
+            // numBrightness
+            // 
+            this.numBrightness.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.numBrightness.DecimalPlaces = 2;
+            this.numBrightness.Increment = new decimal(new int[] {
+            1,
+            0,
+            0,
+            65536});
+            this.numBrightness.Location = new System.Drawing.Point(163, 4);
+            this.numBrightness.Maximum = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            this.numBrightness.Minimum = new decimal(new int[] {
+            1,
+            0,
+            0,
+            -2147483648});
+            this.numBrightness.Name = "numBrightness";
+            this.numBrightness.Size = new System.Drawing.Size(49, 20);
+            this.numBrightness.TabIndex = 2;
+            // 
+            // label17
+            // 
+            this.label17.AutoSize = true;
+            this.label17.Location = new System.Drawing.Point(6, 6);
+            this.label17.Name = "label17";
+            this.label17.Size = new System.Drawing.Size(56, 13);
+            this.label17.TabIndex = 0;
+            this.label17.Text = "&Brightness";
+            // 
+            // trackBrightness
+            // 
+            this.trackBrightness.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.trackBrightness.AutoSize = false;
+            this.trackBrightness.Location = new System.Drawing.Point(56, 4);
+            this.trackBrightness.Maximum = 100;
+            this.trackBrightness.Minimum = -100;
+            this.trackBrightness.Name = "trackBrightness";
+            this.trackBrightness.Size = new System.Drawing.Size(108, 24);
+            this.trackBrightness.TabIndex = 1;
+            this.trackBrightness.TickStyle = System.Windows.Forms.TickStyle.None;
+            // 
+            // btnResetColors
+            // 
+            this.btnResetColors.Location = new System.Drawing.Point(151, 26);
+            this.btnResetColors.Name = "btnResetColors";
+            this.btnResetColors.Size = new System.Drawing.Size(49, 23);
+            this.btnResetColors.TabIndex = 2;
+            this.btnResetColors.Text = "&Reset";
+            this.btnResetColors.UseVisualStyleBackColor = true;
+            this.btnResetColors.Click += new System.EventHandler(this.btnResetColors_Click);
+            // 
+            // labelRuler15
+            // 
+            this.labelRuler15.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.labelRuler15.Location = new System.Drawing.Point(0, 58);
+            this.labelRuler15.Name = "labelRuler15";
+            this.labelRuler15.Size = new System.Drawing.Size(218, 13);
+            this.labelRuler15.TabIndex = 3;
+            // 
+            // chkCustomizeColors
+            // 
+            this.chkCustomizeColors.AutoSize = true;
+            this.chkCustomizeColors.Location = new System.Drawing.Point(19, 30);
+            this.chkCustomizeColors.Name = "chkCustomizeColors";
+            this.chkCustomizeColors.Size = new System.Drawing.Size(74, 17);
+            this.chkCustomizeColors.TabIndex = 1;
+            this.chkCustomizeColors.Text = "&Customize";
+            this.chkCustomizeColors.UseVisualStyleBackColor = true;
+            // 
+            // labelRuler16
+            // 
+            this.labelRuler16.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.labelRuler16.Location = new System.Drawing.Point(0, 0);
+            this.labelRuler16.Name = "labelRuler16";
+            this.labelRuler16.Size = new System.Drawing.Size(218, 13);
+            this.labelRuler16.TabIndex = 0;
+            this.labelRuler16.Text = "Colors";
+            // 
+            // pagePreferences
+            // 
+            this.pagePreferences.Controls.Add(this.labelRuler14);
+            this.pagePreferences.Controls.Add(this.chkCloseToTray);
+            this.pagePreferences.Controls.Add(this.chkMinimzeToTray);
+            this.pagePreferences.Controls.Add(this.labelRuler13);
+            this.pagePreferences.Location = new System.Drawing.Point(0, 0);
+            this.pagePreferences.Name = "pagePreferences";
+            this.pagePreferences.Padding = new System.Windows.Forms.Padding(3);
+            this.pagePreferences.Size = new System.Drawing.Size(218, 251);
+            this.pagePreferences.TabIndex = 9;
+            this.pagePreferences.Text = "Preferences";
+            // 
+            // labelRuler14
+            // 
+            this.labelRuler14.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.labelRuler14.Location = new System.Drawing.Point(0, 75);
+            this.labelRuler14.Name = "labelRuler14";
+            this.labelRuler14.Size = new System.Drawing.Size(218, 13);
+            this.labelRuler14.TabIndex = 3;
+            // 
+            // chkCloseToTray
+            // 
+            this.chkCloseToTray.AutoSize = true;
+            this.chkCloseToTray.Location = new System.Drawing.Point(20, 47);
+            this.chkCloseToTray.Name = "chkCloseToTray";
+            this.chkCloseToTray.Size = new System.Drawing.Size(88, 17);
+            this.chkCloseToTray.TabIndex = 2;
+            this.chkCloseToTray.Text = "&Close to Tray";
+            this.chkCloseToTray.UseVisualStyleBackColor = true;
+            // 
+            // chkMinimzeToTray
+            // 
+            this.chkMinimzeToTray.AutoSize = true;
+            this.chkMinimzeToTray.Location = new System.Drawing.Point(20, 24);
+            this.chkMinimzeToTray.Name = "chkMinimzeToTray";
+            this.chkMinimzeToTray.Size = new System.Drawing.Size(102, 17);
+            this.chkMinimzeToTray.TabIndex = 1;
+            this.chkMinimzeToTray.Text = "&Minimize to Tray";
+            this.chkMinimzeToTray.UseVisualStyleBackColor = true;
+            // 
+            // labelRuler13
+            // 
+            this.labelRuler13.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.labelRuler13.Location = new System.Drawing.Point(0, 0);
+            this.labelRuler13.Name = "labelRuler13";
+            this.labelRuler13.Size = new System.Drawing.Size(218, 13);
+            this.labelRuler13.TabIndex = 0;
+            this.labelRuler13.Text = "Preferences";
+            // 
+            // pageInfo
+            // 
+            this.pageInfo.Controls.Add(this.linkProjectPage);
+            this.pageInfo.Controls.Add(this.txtLog);
+            this.pageInfo.Location = new System.Drawing.Point(0, 0);
+            this.pageInfo.Name = "pageInfo";
+            this.pageInfo.Size = new System.Drawing.Size(218, 251);
+            this.pageInfo.TabIndex = 3;
+            this.pageInfo.Text = "Info";
+            // 
+            // linkProjectPage
+            // 
+            this.linkProjectPage.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.linkProjectPage.AutoSize = true;
+            this.linkProjectPage.Location = new System.Drawing.Point(153, 238);
+            this.linkProjectPage.Name = "linkProjectPage";
+            this.linkProjectPage.Size = new System.Drawing.Size(68, 13);
+            this.linkProjectPage.TabIndex = 1;
+            this.linkProjectPage.TabStop = true;
+            this.linkProjectPage.Text = "Project Page";
+            this.linkProjectPage.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkProjectPage_LinkClicked);
+            // 
+            // txtLog
+            // 
+            this.txtLog.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtLog.BackColor = System.Drawing.SystemColors.Window;
+            this.txtLog.Font = new System.Drawing.Font("Consolas", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtLog.Location = new System.Drawing.Point(0, 0);
+            this.txtLog.Multiline = true;
+            this.txtLog.Name = "txtLog";
+            this.txtLog.ReadOnly = true;
+            this.txtLog.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+            this.txtLog.Size = new System.Drawing.Size(218, 235);
+            this.txtLog.TabIndex = 0;
+            this.txtLog.WordWrap = false;
+            // 
             // pageFOV
             // 
             this.pageFOV.Controls.Add(this.label13);
@@ -1468,58 +1920,6 @@
             this.labelRuler7.TabIndex = 0;
             this.labelRuler7.Text = "Field of View";
             // 
-            // pagePreferences
-            // 
-            this.pagePreferences.Controls.Add(this.labelRuler14);
-            this.pagePreferences.Controls.Add(this.chkCloseToTray);
-            this.pagePreferences.Controls.Add(this.chkMinimzeToTray);
-            this.pagePreferences.Controls.Add(this.labelRuler13);
-            this.pagePreferences.Location = new System.Drawing.Point(0, 0);
-            this.pagePreferences.Name = "pagePreferences";
-            this.pagePreferences.Padding = new System.Windows.Forms.Padding(3);
-            this.pagePreferences.Size = new System.Drawing.Size(218, 251);
-            this.pagePreferences.TabIndex = 9;
-            this.pagePreferences.Text = "Preferences";
-            // 
-            // labelRuler14
-            // 
-            this.labelRuler14.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.labelRuler14.Location = new System.Drawing.Point(0, 75);
-            this.labelRuler14.Name = "labelRuler14";
-            this.labelRuler14.Size = new System.Drawing.Size(218, 13);
-            this.labelRuler14.TabIndex = 3;
-            // 
-            // chkCloseToTray
-            // 
-            this.chkCloseToTray.AutoSize = true;
-            this.chkCloseToTray.Location = new System.Drawing.Point(20, 47);
-            this.chkCloseToTray.Name = "chkCloseToTray";
-            this.chkCloseToTray.Size = new System.Drawing.Size(88, 17);
-            this.chkCloseToTray.TabIndex = 2;
-            this.chkCloseToTray.Text = "&Close to Tray";
-            this.chkCloseToTray.UseVisualStyleBackColor = true;
-            // 
-            // chkMinimzeToTray
-            // 
-            this.chkMinimzeToTray.AutoSize = true;
-            this.chkMinimzeToTray.Location = new System.Drawing.Point(20, 24);
-            this.chkMinimzeToTray.Name = "chkMinimzeToTray";
-            this.chkMinimzeToTray.Size = new System.Drawing.Size(102, 17);
-            this.chkMinimzeToTray.TabIndex = 1;
-            this.chkMinimzeToTray.Text = "&Minimize to Tray";
-            this.chkMinimzeToTray.UseVisualStyleBackColor = true;
-            // 
-            // labelRuler13
-            // 
-            this.labelRuler13.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.labelRuler13.Location = new System.Drawing.Point(0, 0);
-            this.labelRuler13.Name = "labelRuler13";
-            this.labelRuler13.Size = new System.Drawing.Size(218, 13);
-            this.labelRuler13.TabIndex = 0;
-            this.labelRuler13.Text = "Preferences";
-            // 
             // pageBlank
             // 
             this.pageBlank.Location = new System.Drawing.Point(0, 0);
@@ -1553,17 +1953,6 @@
             this.pageControl1.ResumeLayout(false);
             this.pageGeneral.ResumeLayout(false);
             this.pageGeneral.PerformLayout();
-            this.pageInput.ResumeLayout(false);
-            this.pageInput.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numRunInputScale)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.trackRunInputScale)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numWalkInputScale)).EndInit();
-            this.tableLayoutPanel1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.trackWalkInputScale)).EndInit();
-            this.pageUI.ResumeLayout(false);
-            this.pageUI.PerformLayout();
-            this.pageInfo.ResumeLayout(false);
-            this.pageInfo.PerformLayout();
             this.pageCamera1.ResumeLayout(false);
             this.pageCamera1.PerformLayout();
             this.pnlCam1Customize.ResumeLayout(false);
@@ -1588,6 +1977,35 @@
             ((System.ComponentModel.ISupportInitialize)(this.trackCam2Z)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numCam2Y)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.trackCam2Y)).EndInit();
+            this.pageInput.ResumeLayout(false);
+            this.pageInput.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numRunInputScale)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.trackRunInputScale)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numWalkInputScale)).EndInit();
+            this.tableLayoutPanel1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.trackWalkInputScale)).EndInit();
+            this.pageUI.ResumeLayout(false);
+            this.pageUI.PerformLayout();
+            this.pageColors.ResumeLayout(false);
+            this.pageColors.PerformLayout();
+            this.pnlCustomizeColors.ResumeLayout(false);
+            this.pnlCustomizeColors.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numBlueBalance)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.trackBlueBalance)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numGreenBalance)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.trackGreenBalance)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numRedBalance)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.trackRedBalance)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numSaturation)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.trackSaturation)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numContrast)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.trackContrast)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numBrightness)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.trackBrightness)).EndInit();
+            this.pagePreferences.ResumeLayout(false);
+            this.pagePreferences.PerformLayout();
+            this.pageInfo.ResumeLayout(false);
+            this.pageInfo.PerformLayout();
             this.pageFOV.ResumeLayout(false);
             this.pageFOV.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numFovNPCTalk)).EndInit();
@@ -1596,8 +2014,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.trackFovTPS)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numFovNormal)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.trackFovNormal)).EndInit();
-            this.pagePreferences.ResumeLayout(false);
-            this.pagePreferences.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -1707,6 +2123,30 @@
         private System.Windows.Forms.CheckBox chkCloseToTray;
         private System.Windows.Forms.CheckBox chkMinimzeToTray;
         private LabelRuler labelRuler13;
+        private System.Windows.Forms.TabPage pageColors;
+        private BufferedPanel pnlCustomizeColors;
+        private System.Windows.Forms.NumericUpDown numBlueBalance;
+        private System.Windows.Forms.Label label21;
+        private System.Windows.Forms.TrackBar trackBlueBalance;
+        private System.Windows.Forms.NumericUpDown numGreenBalance;
+        private System.Windows.Forms.Label label20;
+        private System.Windows.Forms.TrackBar trackGreenBalance;
+        private System.Windows.Forms.NumericUpDown numRedBalance;
+        private System.Windows.Forms.Label label19;
+        private System.Windows.Forms.TrackBar trackRedBalance;
+        private System.Windows.Forms.NumericUpDown numSaturation;
+        private System.Windows.Forms.Label label18;
+        private System.Windows.Forms.TrackBar trackSaturation;
+        private System.Windows.Forms.NumericUpDown numContrast;
+        private System.Windows.Forms.Label label16;
+        private System.Windows.Forms.TrackBar trackContrast;
+        private System.Windows.Forms.NumericUpDown numBrightness;
+        private System.Windows.Forms.Label label17;
+        private System.Windows.Forms.TrackBar trackBrightness;
+        private System.Windows.Forms.Button btnResetColors;
+        private LabelRuler labelRuler15;
+        private System.Windows.Forms.CheckBox chkCustomizeColors;
+        private LabelRuler labelRuler16;
     }
 }
 

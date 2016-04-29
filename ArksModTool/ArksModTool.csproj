@@ -203,6 +203,8 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <None Include="Resources\Patch Files\ColorAdjustments.dat" />
+    <None Include="Resources\Patch Files\ColorAdjustmentsHook.dat" />
     <None Include="Resources\Patch Files\DisableAutoShowLog.dat" />
     <None Include="Resources\Patch Files\DisableECodeMapChange.dat" />
     <None Include="Resources\Patch Files\InputScaleAuto.dat" />

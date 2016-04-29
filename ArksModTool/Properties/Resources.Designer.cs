@@ -8,11 +8,10 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace ArksModTool.Properties
-{
+namespace ArksModTool.Properties {
     using System;
-
-
+    
+    
     /// <summary>
     ///   A strongly-typed resource class, for looking up localized strings, etc.
     /// </summary>
@@ -23,124 +22,124 @@ namespace ArksModTool.Properties
     [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "4.0.0.0")]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
-    internal class Resources
-    {
-
+    internal class Resources {
+        
         private static global::System.Resources.ResourceManager resourceMan;
-
+        
         private static global::System.Globalization.CultureInfo resourceCulture;
-
+        
         [global::System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1811:AvoidUncalledPrivateCode")]
-        internal Resources()
-        {
+        internal Resources() {
         }
-
+        
         /// <summary>
         ///   Returns the cached ResourceManager instance used by this class.
         /// </summary>
         [global::System.ComponentModel.EditorBrowsableAttribute(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        internal static global::System.Resources.ResourceManager ResourceManager
-        {
-            get
-            {
-                if (object.ReferenceEquals(resourceMan, null))
-                {
+        internal static global::System.Resources.ResourceManager ResourceManager {
+            get {
+                if (object.ReferenceEquals(resourceMan, null)) {
                     global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("ArksModTool.Properties.Resources", typeof(Resources).Assembly);
                     resourceMan = temp;
                 }
                 return resourceMan;
             }
         }
-
+        
         /// <summary>
         ///   Overrides the current thread's CurrentUICulture property for all
         ///   resource lookups using this strongly typed resource class.
         /// </summary>
         [global::System.ComponentModel.EditorBrowsableAttribute(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        internal static global::System.Globalization.CultureInfo Culture
-        {
-            get
-            {
+        internal static global::System.Globalization.CultureInfo Culture {
+            get {
                 return resourceCulture;
             }
-            set
-            {
+            set {
                 resourceCulture = value;
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized resource of type System.Byte[].
         /// </summary>
-        internal static byte[] Camera1Override
-        {
-            get
-            {
+        internal static byte[] Camera1Override {
+            get {
                 object obj = ResourceManager.GetObject("Camera1Override", resourceCulture);
                 return ((byte[])(obj));
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized resource of type System.Byte[].
         /// </summary>
-        internal static byte[] Camera2Override
-        {
-            get
-            {
+        internal static byte[] Camera2Override {
+            get {
                 object obj = ResourceManager.GetObject("Camera2Override", resourceCulture);
                 return ((byte[])(obj));
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized resource of type System.Byte[].
         /// </summary>
-        internal static byte[] Camera2TransOverride
-        {
-            get
-            {
+        internal static byte[] Camera2TransOverride {
+            get {
                 object obj = ResourceManager.GetObject("Camera2TransOverride", resourceCulture);
                 return ((byte[])(obj));
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized resource of type System.Byte[].
         /// </summary>
-        internal static byte[] CameraControlMain
-        {
-            get
-            {
+        internal static byte[] CameraControlMain {
+            get {
                 object obj = ResourceManager.GetObject("CameraControlMain", resourceCulture);
                 return ((byte[])(obj));
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized resource of type System.Byte[].
         /// </summary>
-        internal static byte[] CameraControlMainHook
-        {
-            get
-            {
+        internal static byte[] CameraControlMainHook {
+            get {
                 object obj = ResourceManager.GetObject("CameraControlMainHook", resourceCulture);
                 return ((byte[])(obj));
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized resource of type System.Byte[].
         /// </summary>
-        internal static byte[] CameraLandingOverride
-        {
-            get
-            {
+        internal static byte[] CameraLandingOverride {
+            get {
                 object obj = ResourceManager.GetObject("CameraLandingOverride", resourceCulture);
                 return ((byte[])(obj));
             }
         }
-
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Byte[].
+        /// </summary>
+        internal static byte[] ColorAdjustments {
+            get {
+                object obj = ResourceManager.GetObject("ColorAdjustments", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Byte[].
+        /// </summary>
+        internal static byte[] ColorAdjustmentsHook {
+            get {
+                object obj = ResourceManager.GetObject("ColorAdjustmentsHook", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
         /// <summary>
         ///   Looks up a localized string similar to OpenProcess
         ///ReadProcessMemory
@@ -152,309 +151,257 @@ namespace ArksModTool.Properties
         ///ReadFile
         ///WriteFile.
         /// </summary>
-        internal static string CommFunctions
-        {
-            get
-            {
+        internal static string CommFunctions {
+            get {
                 return ResourceManager.GetString("CommFunctions", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized resource of type System.Byte[].
         /// </summary>
-        internal static byte[] CommInit
-        {
-            get
-            {
+        internal static byte[] CommInit {
+            get {
                 object obj = ResourceManager.GetObject("CommInit", resourceCulture);
                 return ((byte[])(obj));
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized resource of type System.Byte[].
         /// </summary>
-        internal static byte[] CommMain
-        {
-            get
-            {
+        internal static byte[] CommMain {
+            get {
                 object obj = ResourceManager.GetObject("CommMain", resourceCulture);
                 return ((byte[])(obj));
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized resource of type System.Byte[].
         /// </summary>
-        internal static byte[] CommMainHook
-        {
-            get
-            {
+        internal static byte[] CommMainHook {
+            get {
                 object obj = ResourceManager.GetObject("CommMainHook", resourceCulture);
                 return ((byte[])(obj));
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized resource of type System.Byte[].
         /// </summary>
-        internal static byte[] DisableAutoShowLog
-        {
-            get
-            {
+        internal static byte[] DisableAutoShowLog {
+            get {
                 object obj = ResourceManager.GetObject("DisableAutoShowLog", resourceCulture);
                 return ((byte[])(obj));
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized resource of type System.Byte[].
         /// </summary>
-        internal static byte[] DisableECodeMapChange
-        {
-            get
-            {
+        internal static byte[] DisableECodeMapChange {
+            get {
                 object obj = ResourceManager.GetObject("DisableECodeMapChange", resourceCulture);
                 return ((byte[])(obj));
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Icon similar to (Icon).
         /// </summary>
-        internal static System.Drawing.Icon icon
-        {
-            get
-            {
+        internal static System.Drawing.Icon icon {
+            get {
                 object obj = ResourceManager.GetObject("icon", resourceCulture);
                 return ((System.Drawing.Icon)(obj));
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Icon similar to (Icon).
         /// </summary>
-        internal static System.Drawing.Icon icon_active
-        {
-            get
-            {
+        internal static System.Drawing.Icon icon_active {
+            get {
                 object obj = ResourceManager.GetObject("icon_active", resourceCulture);
                 return ((System.Drawing.Icon)(obj));
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Icon similar to (Icon).
         /// </summary>
-        internal static System.Drawing.Icon icon_idle
-        {
-            get
-            {
+        internal static System.Drawing.Icon icon_idle {
+            get {
                 object obj = ResourceManager.GetObject("icon_idle", resourceCulture);
                 return ((System.Drawing.Icon)(obj));
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized resource of type System.Byte[].
         /// </summary>
-        internal static byte[] InputScaleAuto
-        {
-            get
-            {
+        internal static byte[] InputScaleAuto {
+            get {
                 object obj = ResourceManager.GetObject("InputScaleAuto", resourceCulture);
                 return ((byte[])(obj));
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized resource of type System.Byte[].
         /// </summary>
-        internal static byte[] InputScaleNormal
-        {
-            get
-            {
+        internal static byte[] InputScaleNormal {
+            get {
                 object obj = ResourceManager.GetObject("InputScaleNormal", resourceCulture);
                 return ((byte[])(obj));
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized resource of type System.Byte[].
         /// </summary>
-        internal static byte[] ModelOverride
-        {
-            get
-            {
+        internal static byte[] ModelOverride {
+            get {
                 object obj = ResourceManager.GetObject("ModelOverride", resourceCulture);
                 return ((byte[])(obj));
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized resource of type System.Byte[].
         /// </summary>
-        internal static byte[] ModelOverrideHook
-        {
-            get
-            {
+        internal static byte[] ModelOverrideHook {
+            get {
                 object obj = ResourceManager.GetObject("ModelOverrideHook", resourceCulture);
                 return ((byte[])(obj));
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized resource of type System.Byte[].
         /// </summary>
-        internal static byte[] SharpDX
-        {
-            get
-            {
+        internal static byte[] SharpDX {
+            get {
                 object obj = ResourceManager.GetObject("SharpDX", resourceCulture);
                 return ((byte[])(obj));
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized resource of type System.Byte[].
         /// </summary>
-        internal static byte[] SharpDX_DirectInput
-        {
-            get
-            {
+        internal static byte[] SharpDX_DirectInput {
+            get {
                 object obj = ResourceManager.GetObject("SharpDX_DirectInput", resourceCulture);
                 return ((byte[])(obj));
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized resource of type System.Byte[].
         /// </summary>
-        internal static byte[] ToggleFarCulling
-        {
-            get
-            {
+        internal static byte[] ToggleFarCulling {
+            get {
                 object obj = ResourceManager.GetObject("ToggleFarCulling", resourceCulture);
                 return ((byte[])(obj));
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized resource of type System.Byte[].
         /// </summary>
-        internal static byte[] ToggleFarCullingTerrain
-        {
-            get
-            {
+        internal static byte[] ToggleFarCullingTerrain {
+            get {
                 object obj = ResourceManager.GetObject("ToggleFarCullingTerrain", resourceCulture);
                 return ((byte[])(obj));
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized resource of type System.Byte[].
         /// </summary>
-        internal static byte[] ToggleIntroVideo
-        {
-            get
-            {
+        internal static byte[] ToggleIntroVideo {
+            get {
                 object obj = ResourceManager.GetObject("ToggleIntroVideo", resourceCulture);
                 return ((byte[])(obj));
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized resource of type System.Byte[].
         /// </summary>
-        internal static byte[] ToggleLOD
-        {
-            get
-            {
+        internal static byte[] ToggleLOD {
+            get {
                 object obj = ResourceManager.GetObject("ToggleLOD", resourceCulture);
                 return ((byte[])(obj));
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized resource of type System.Byte[].
         /// </summary>
-        internal static byte[] ToggleLODHook
-        {
-            get
-            {
+        internal static byte[] ToggleLODHook {
+            get {
                 object obj = ResourceManager.GetObject("ToggleLODHook", resourceCulture);
                 return ((byte[])(obj));
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized resource of type System.Byte[].
         /// </summary>
-        internal static byte[] ToggleNearCulling
-        {
-            get
-            {
+        internal static byte[] ToggleNearCulling {
+            get {
                 object obj = ResourceManager.GetObject("ToggleNearCulling", resourceCulture);
                 return ((byte[])(obj));
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized resource of type System.Byte[].
         /// </summary>
-        internal static byte[] ToggleUpdateCulling
-        {
-            get
-            {
+        internal static byte[] ToggleUpdateCulling {
+            get {
                 object obj = ResourceManager.GetObject("ToggleUpdateCulling", resourceCulture);
                 return ((byte[])(obj));
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized resource of type System.Byte[].
         /// </summary>
-        internal static byte[] UIHideECodes
-        {
-            get
-            {
+        internal static byte[] UIHideECodes {
+            get {
                 object obj = ResourceManager.GetObject("UIHideECodes", resourceCulture);
                 return ((byte[])(obj));
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized resource of type System.Byte[].
         /// </summary>
-        internal static byte[] UIHideMenus
-        {
-            get
-            {
+        internal static byte[] UIHideMenus {
+            get {
                 object obj = ResourceManager.GetObject("UIHideMenus", resourceCulture);
                 return ((byte[])(obj));
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized resource of type System.Byte[].
         /// </summary>
-        internal static byte[] UIHideScreenNotifications
-        {
-            get
-            {
+        internal static byte[] UIHideScreenNotifications {
+            get {
                 object obj = ResourceManager.GetObject("UIHideScreenNotifications", resourceCulture);
                 return ((byte[])(obj));
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized resource of type System.Byte[].
         /// </summary>
-        internal static byte[] UIHideSubpalette
-        {
-            get
-            {
+        internal static byte[] UIHideSubpalette {
+            get {
                 object obj = ResourceManager.GetObject("UIHideSubpalette", resourceCulture);
                 return ((byte[])(obj));
             }

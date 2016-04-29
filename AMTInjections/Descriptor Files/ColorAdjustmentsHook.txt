@@ -1,0 +1,6 @@
+Addr : pPatch,		[addr], $code, +6D
+Addr : hookFunc,	[addr], $code, +600
+
+Base : pPatch
+
+BindF : 0, hookFunc

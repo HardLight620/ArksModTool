@@ -99,6 +99,12 @@
     <MASM Include="Source Files\DisableAutoShowLog.asm">
       <Filter>Source Files</Filter>
     </MASM>
+    <MASM Include="Source Files\ColorAdjustments.asm">
+      <Filter>Source Files</Filter>
+    </MASM>
+    <MASM Include="Source Files\ColorAdjustmentsHook.asm">
+      <Filter>Source Files</Filter>
+    </MASM>
   </ItemGroup>
   <ItemGroup>
     <Text Include="Descriptor Files\CommMain.txt">

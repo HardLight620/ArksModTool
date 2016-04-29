@@ -31,7 +31,7 @@ namespace ArksModTool
         private int m_pso2PID = 0;
         private IntPtr m_pso2HWND = IntPtr.Zero;
         private bool m_gameReplied = false;
-        private DateTime m_lastTime;
+        private DateTime m_lastTime = DateTime.MinValue;
 
         private IntPtr m_commBuffer = IntPtr.Zero;
         private IntPtr m_commBufferLocation = new IntPtr(0x48000000);
@@ -119,6 +119,16 @@ namespace ArksModTool
             CreateSettingBinding(numCam2Pitch, "Value", "ShooterCamPitch");
             CreateSettingBinding(numCam2Height, "Value", "ShooterCamHeight");
 
+            CreateSettingBinding(chkCustomizeColors, "Checked", "CustomizeColors");
+            CreateSettingBinding(pnlCustomizeColors, "Enabled", "CustomizeColors");
+            CreateSettingBinding(btnResetColors, "Enabled", "CustomizeColors");
+            CreateSettingBinding(numBrightness, "Value", "Brightness");
+            CreateSettingBinding(numContrast, "Value", "Contrast");
+            CreateSettingBinding(numSaturation, "Value", "Saturation");
+            CreateSettingBinding(numRedBalance, "Value", "RedBalance");
+            CreateSettingBinding(numGreenBalance, "Value", "GreenBalance");
+            CreateSettingBinding(numBlueBalance, "Value", "BlueBalance");
+
             ConvertEventHandler parseBy10 = (object s, ConvertEventArgs e) => { e.Value = (decimal)((int)e.Value / 10.0f); };
             ConvertEventHandler formatBy10 = (object s, ConvertEventArgs e) => { e.Value = (int)((decimal)e.Value * 10); };
             ConvertEventHandler parseBy100 = (object s, ConvertEventArgs e) => { e.Value = (decimal)((int)e.Value / 100.0f); };
@@ -133,6 +143,12 @@ namespace ArksModTool
             CreateTrackBinding(trackCam2Yaw, numCam2Yaw, parseBy10, formatBy10);
             CreateTrackBinding(trackCam2Pitch, numCam2Pitch, parseBy10, formatBy10);
             CreateTrackBinding(trackCam2Height, numCam2Height, parseBy10, formatBy10);
+            CreateTrackBinding(trackBrightness, numBrightness, parseBy100, formatBy100);
+            CreateTrackBinding(trackContrast, numContrast, parseBy100, formatBy100);
+            CreateTrackBinding(trackSaturation, numSaturation, parseBy100, formatBy100);
+            CreateTrackBinding(trackRedBalance, numRedBalance, parseBy100, formatBy100);
+            CreateTrackBinding(trackGreenBalance, numGreenBalance, parseBy100, formatBy100);
+            CreateTrackBinding(trackBlueBalance, numBlueBalance, parseBy100, formatBy100);
         }
 
         private void InitializeInput()
@@ -236,6 +252,22 @@ namespace ArksModTool
             numCam2Height.DataBindings.Cast<Binding>().ForEach((Binding bind) => bind.ReadValue());
         }
 
+        private void btnResetColors_Click(object sender, EventArgs e)
+        {
+            Program.Settings.Brightness = Settings.Default.Brightness;
+            Program.Settings.Contrast = Settings.Default.Contrast;
+            Program.Settings.Saturation = Settings.Default.Saturation;
+            Program.Settings.RedBalance = Settings.Default.RedBalance;
+            Program.Settings.GreenBalance = Settings.Default.GreenBalance;
+            Program.Settings.BlueBalance = Settings.Default.BlueBalance;
+            numBrightness.DataBindings.Cast<Binding>().ForEach((Binding binding) => binding.ReadValue());
+            numContrast.DataBindings.Cast<Binding>().ForEach((Binding binding) => binding.ReadValue());
+            numSaturation.DataBindings.Cast<Binding>().ForEach((Binding binding) => binding.ReadValue());
+            numRedBalance.DataBindings.Cast<Binding>().ForEach((Binding binding) => binding.ReadValue());
+            numGreenBalance.DataBindings.Cast<Binding>().ForEach((Binding binding) => binding.ReadValue());
+            numBlueBalance.DataBindings.Cast<Binding>().ForEach((Binding binding) => binding.ReadValue());
+        }
+
         private void linkProjectPage_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             Process.Start(Program.ProjectPage);
@@ -337,9 +369,9 @@ namespace ArksModTool
 
         private void ReadIncoming()
         {
-            int status = Marshal.ReadInt32(m_commBuffer, 0x60);
+            int status = Marshal.ReadInt32(m_commBuffer, 0x80);
 
-            Marshal.WriteInt32(m_commBuffer, 0x60, 0x00000000);
+            Marshal.WriteInt32(m_commBuffer, 0x80, 0x00000000);
 
             if (status != 0)
             {
@@ -372,6 +404,12 @@ namespace ArksModTool
             float shooterTargetX = -(float)(Math.Tan(Program.Settings.ShooterCamYaw * Math.PI / 180.0) * 14.96505737);
             float shooterTargetY = (float)(Math.Tan(Program.Settings.ShooterCamPitch * Math.PI / 180.0) * 14.96505737);
             float shooterHeight = Program.Settings.ShooterCamHeight;
+            float brightness = Program.Settings.Brightness;
+            float contrast = 1.0f + Program.Settings.Contrast;
+            float saturation = 1.0f + Program.Settings.Saturation;
+            float redBalance = 1.0f + Program.Settings.RedBalance;
+            float greenBalance = 1.0f + Program.Settings.GreenBalance;
+            float blueBalance = 1.0f + Program.Settings.BlueBalance;
             
             AdjustmentFlags adjustments = AdjustmentFlags.None;
             adjustments |= (Program.Settings.DisableIntroVideo ? AdjustmentFlags.DisableIntro : 0);
@@ -385,6 +423,7 @@ namespace ArksModTool
             adjustments |= (Program.Settings.DisableLODReduction ? AdjustmentFlags.DisableLODReduction : 0);
             adjustments |= (Program.Settings.CustomizeRegularCam ? AdjustmentFlags.CustomizeCam1 : 0);
             adjustments |= (Program.Settings.CustomizeShooterCam ? AdjustmentFlags.CustomizeCam2 : 0);
+            adjustments |= (Program.Settings.CustomizeColors ? AdjustmentFlags.CustomizeColors : 0);
 
             Marshal.WriteInt32(m_commBuffer, 0x0, (int)adjustments);
             Marshal.StructureToPtr(inputScale, IntPtr.Add(m_commBuffer, 0x4), false);
@@ -402,6 +441,15 @@ namespace ArksModTool
             Marshal.StructureToPtr(shooterTargetX, IntPtr.Add(m_commBuffer, 0x40), false);
             Marshal.StructureToPtr(shooterTargetY, IntPtr.Add(m_commBuffer, 0x44), false);
             Marshal.StructureToPtr(shooterHeight, IntPtr.Add(m_commBuffer, 0x48), false);
+            Marshal.StructureToPtr(0x00000000, IntPtr.Add(m_commBuffer, 0x4C), false);
+            Marshal.StructureToPtr(brightness, IntPtr.Add(m_commBuffer, 0x50), false);
+            Marshal.StructureToPtr(contrast, IntPtr.Add(m_commBuffer, 0x54), false);
+            Marshal.StructureToPtr(saturation, IntPtr.Add(m_commBuffer, 0x58), false);
+            Marshal.StructureToPtr(0x00000000, IntPtr.Add(m_commBuffer, 0x5C), false);
+            Marshal.StructureToPtr(redBalance, IntPtr.Add(m_commBuffer, 0x60), false);
+            Marshal.StructureToPtr(greenBalance, IntPtr.Add(m_commBuffer, 0x64), false);
+            Marshal.StructureToPtr(blueBalance, IntPtr.Add(m_commBuffer, 0x68), false);
+            Marshal.StructureToPtr(0x3F800000, IntPtr.Add(m_commBuffer, 0x6C), false);
         }
 
         private void UpdateStatus()
@@ -580,7 +628,6 @@ namespace ArksModTool
             return pCommFunctions;
         }
 
-
         private bool ApplyGamePatches(IntPtr handle)
         {
             bool isOkay = true;
@@ -612,6 +659,9 @@ namespace ArksModTool
             isOkay &= isOkay && ApplyGamePatch(handle, Resources.CameraLandingOverride);
             isOkay &= isOkay && ApplyGamePatch(handle, Resources.CameraControlMain);
             isOkay &= isOkay && ApplyGamePatch(handle, Resources.CameraControlMainHook);
+
+            isOkay &= isOkay && ApplyGamePatch(handle, Resources.ColorAdjustments);
+            isOkay &= isOkay && ApplyGamePatch(handle, Resources.ColorAdjustmentsHook);
             
             return isOkay;
         }
@@ -741,6 +791,8 @@ namespace ArksModTool
 
             CustomizeCam1 = 0x1000,
             CustomizeCam2 = 0x2000,
+
+            CustomizeColors = 0x010000
         }
     }
 }

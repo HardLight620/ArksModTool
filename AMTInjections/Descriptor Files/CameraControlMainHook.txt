@@ -1,4 +1,4 @@
-Addr : pPatch,		[addr], $code, +58
+Addr : pPatch,		[addr], $code, +61
 Addr : hookFunc,	[addr], $code, +400
 
 Base : pPatch

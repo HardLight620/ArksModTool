@@ -36,6 +36,14 @@ EXPORTS CameraLandingOverride
 EXPORTS CameraLandingOverride_End
 EXPORTS CameraLandingOverride_Bindings
 
+EXPORTS ColorAdjustments
+EXPORTS ColorAdjustments_End
+EXPORTS ColorAdjustments_Bindings
+
+EXPORTS ColorAdjustmentsHook
+EXPORTS ColorAdjustmentsHook_End
+EXPORTS ColorAdjustmentsHook_Bindings
+
 EXPORTS DisableAutoShowLog
 EXPORTS DisableAutoShowLog_End
 EXPORTS DisableAutoShowLog_Bindings
