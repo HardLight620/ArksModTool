@@ -14,27 +14,27 @@ bind2				DWORD		b2+1
 .CODE
 
 CommInit:
-	push	ebx
-	push	esi
-	push	edi
-b0:	mov		esi, NO_ADDRESS
-	mov		edi, [esi+1C]
-	mov		esi, [esi+18]
-	cmp		[esi], 00
-	jne		d0
-	xor		ebx, ebx
+	push ebx
+	push esi
+	push edi
+b0:	mov esi, NO_ADDRESS
+	mov edi, [esi+1C]
+	mov esi, [esi+18]
+	cmp [esi], 00
+	jne d0
+	xor ebx, ebx
 l0:
-b1:	mov		edx, NO_ADDRESS
-b2:	mov		eax, ds:[NO_ADDRESS]
-	push	[esi+ebx*4+40]
-	push	eax
-	call	dword ptr [edx]			; GetProcAddress
-	test	eax, eax
-	je		d2
-	mov		[esi+ebx*4], eax
-	inc		ebx
-	cmp		ebx, 9
-	jb		l0
+b1:	mov edx, NO_ADDRESS
+b2:	mov eax, ds:[NO_ADDRESS]
+	push [esi+ebx*4+40]
+	push eax
+	call dword ptr [edx]			; GetProcAddress
+	test eax, eax
+	je d2
+	mov [esi+ebx*4], eax
+	inc ebx
+	cmp ebx, 9
+	jb l0
 d0:	test edi, edi
 	je d1
 	mov eax, [edi+38]
