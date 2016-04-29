@@ -51,10 +51,6 @@ namespace ArksModTool
         public float ShooterCamPitch { get { return m_shooterCamPitch; } set { m_shooterCamPitch = value; } }
         public float ShooterCamHeight { get { return m_shooterCamHeight; } set { m_shooterCamHeight = value; } }
 
-        public Color LuaConsoleBackColor { get { return m_luaConsoleBackColor; } set { m_luaConsoleBackColor = value; } }
-        public Color LuaConsoleFontColor { get { return m_luaConsoleFontColor; } set { m_luaConsoleFontColor = value; } }
-        public Font LuaConsoleFont { get { return m_luaConsoleFont; } set { m_luaConsoleFont = value; } }
-
         public bool MinimizeToTray { get { return m_minimizeToTray; } set { m_minimizeToTray = value; } }
         public bool CloseToTray { get { return m_closeToTray; } set { m_closeToTray = value; } }
 
@@ -91,10 +87,6 @@ namespace ArksModTool
         private float m_shooterCamYaw = -3.9f;
         private float m_shooterCamPitch = 0.0f;
         private float m_shooterCamHeight = 1.5f;
-
-        private Color m_luaConsoleBackColor = Color.Black;
-        private Color m_luaConsoleFontColor = Color.White;
-        private Font m_luaConsoleFont = new Font("consolas", 8.25f);
 
         private bool m_minimizeToTray = false;
         private bool m_closeToTray = false;
@@ -238,10 +230,6 @@ namespace ArksModTool
                         case "FOV Normal":              float.TryParse(kvp.Value, out settings.m_fovNormal); break;
                         case "FOV TPS":                 float.TryParse(kvp.Value, out settings.m_fovTPS); break;
                         case "FOV NPC Talk":            float.TryParse(kvp.Value, out settings.m_fovNPCTalk); break;
-
-                        case "Console Back Color":      TryParseColor(kvp.Value, Color.Black, out settings.m_luaConsoleBackColor); break;
-                        case "Console Font Color":      TryParseColor(kvp.Value, Color.White, out settings.m_luaConsoleFontColor); break;
-                        case "Console Font":            TryParseFont(kvp.Value, new Font("consolas", 8.25f), out settings.m_luaConsoleFont); break;
 
                         case "Customize Regular Cam":   bool.TryParse(kvp.Value, out settings.m_customizeRegularCam); break;
                         case "Customize Shooter Cam":   bool.TryParse(kvp.Value, out settings.m_customizeShooterCam); break;
