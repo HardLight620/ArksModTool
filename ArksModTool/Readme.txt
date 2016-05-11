@@ -1,6 +1,6 @@
 ﻿==
 === Arks Mod Tool
-=== Version 1.2h
+=== Version 1.2i
 ==
 
 A mod utility tool to provide various
@@ -89,6 +89,14 @@ authority.
 ==
 === Version History
 ==
+
+v1.2i:
+
+- Retargeted for client version 4.0201.1
+- Added options for controlling game
+  color balance settings.
+- Moved SharpDX dependencies into app as
+  embedded resources.
 
 v1.2h:
 
