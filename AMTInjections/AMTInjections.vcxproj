@@ -57,6 +57,8 @@
     <Text Include="Descriptor Files\CameraControlMain.txt" />
     <Text Include="Descriptor Files\CameraControlMainHook.txt" />
     <Text Include="Descriptor Files\CameraLandingOverride.txt" />
+    <Text Include="Descriptor Files\ColorAdjustments.txt" />
+    <Text Include="Descriptor Files\ColorAdjustmentsHook.txt" />
     <Text Include="Descriptor Files\CommInit.txt" />
     <Text Include="Descriptor Files\CommMain.txt" />
     <Text Include="Descriptor Files\CommMainHook.txt" />

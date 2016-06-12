@@ -182,5 +182,11 @@
     <Text Include="Descriptor Files\DisableAutoShowLog.txt">
       <Filter>Descriptor Files</Filter>
     </Text>
+    <Text Include="Descriptor Files\ColorAdjustments.txt">
+      <Filter>Descriptor Files</Filter>
+    </Text>
+    <Text Include="Descriptor Files\ColorAdjustmentsHook.txt">
+      <Filter>Descriptor Files</Filter>
+    </Text>
   </ItemGroup>
 </Project>
