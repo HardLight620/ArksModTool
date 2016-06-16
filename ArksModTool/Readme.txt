@@ -1,6 +1,6 @@
 ﻿==
 === Arks Mod Tool
-=== Version 1.2k
+=== Version 1.2l
 ==
 
 A mod utility tool to provide various
@@ -55,8 +55,8 @@ authority.
   appear onscreen at once, some parts of
   ingame models may appear absent.
 
- - Color adjustments will only be applied
-   on graphics settings greater than 1.
+- Color adjustments will only be applied
+  on graphics settings greater than 1.
 
 ==
 === Notes
@@ -92,6 +92,10 @@ authority.
 ==
 === Version History
 ==
+
+v1.2l:
+
+- Retargeted for client version 4.0301.1
 
 v1.2k:
 
