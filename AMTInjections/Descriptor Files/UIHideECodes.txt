@@ -1,5 +1,4 @@
-Addr : tag,			[bytes], 8B 01 FF 50 2C 8B 4C B7 24 6A 03 8B 01 FF 50 30 
-Addr : pPatch,		[addr], tag, +10
+Addr : pPatch,		[addr], $code, +380
 Addr : modFlags,	[addr], $data, +40
 
 Base : pPatch

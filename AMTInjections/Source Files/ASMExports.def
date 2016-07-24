@@ -92,6 +92,10 @@ EXPORTS UIHideECodes
 EXPORTS UIHideECodes_End
 EXPORTS UIHideECodes_Bindings
 
+EXPORTS UIHideECodesHook
+EXPORTS UIHideECodesHook_End
+EXPORTS UIHideECodesHook_Bindings
+
 EXPORTS UIHideMenus
 EXPORTS UIHideMenus_End
 EXPORTS UIHideMenus_Bindings

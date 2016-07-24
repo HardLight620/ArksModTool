@@ -380,6 +380,16 @@ namespace ArksModTool.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Byte[].
         /// </summary>
+        internal static byte[] UIHideECodesHook {
+            get {
+                object obj = ResourceManager.GetObject("UIHideECodesHook", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Byte[].
+        /// </summary>
         internal static byte[] UIHideMenus {
             get {
                 object obj = ResourceManager.GetObject("UIHideMenus", resourceCulture);

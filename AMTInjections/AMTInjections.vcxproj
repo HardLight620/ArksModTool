@@ -23,6 +23,7 @@
     <MASM Include="Source Files\ToggleNearCulling.asm" />
     <MASM Include="Source Files\ToggleUpdateCulling.asm" />
     <MASM Include="Source Files\UIHideECodes.asm" />
+    <MASM Include="Source Files\UIHideECodesHook.asm" />
     <MASM Include="Source Files\UIHideMenus.asm" />
     <MASM Include="Source Files\UIHideScreenNotifications.asm" />
     <MASM Include="Source Files\UIHideSubpalette.asm" />
@@ -74,6 +75,7 @@
     <Text Include="Descriptor Files\ToggleNearCulling.txt" />
     <Text Include="Descriptor Files\ToggleUpdateCulling.txt" />
     <Text Include="Descriptor Files\UIHideECodes.txt" />
+    <Text Include="Descriptor Files\UIHideECodesHook.txt" />
     <Text Include="Descriptor Files\UIHideMenus.txt" />
     <Text Include="Descriptor Files\UIHideScreenNotifications.txt" />
     <Text Include="Descriptor Files\UIHideSubpalette.txt" />

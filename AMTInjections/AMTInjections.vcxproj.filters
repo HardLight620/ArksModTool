@@ -105,6 +105,9 @@
     <MASM Include="Source Files\ColorAdjustmentsHook.asm">
       <Filter>Source Files</Filter>
     </MASM>
+    <MASM Include="Source Files\UIHideECodesHook.asm">
+      <Filter>Source Files</Filter>
+    </MASM>
   </ItemGroup>
   <ItemGroup>
     <Text Include="Descriptor Files\CommMain.txt">
@@ -186,6 +189,9 @@
       <Filter>Descriptor Files</Filter>
     </Text>
     <Text Include="Descriptor Files\ColorAdjustmentsHook.txt">
+      <Filter>Descriptor Files</Filter>
+    </Text>
+    <Text Include="Descriptor Files\UIHideECodesHook.txt">
       <Filter>Descriptor Files</Filter>
     </Text>
   </ItemGroup>

@@ -219,6 +219,7 @@
     <None Include="Resources\Patch Files\ToggleNearCulling.dat" />
     <None Include="Resources\Patch Files\ToggleUpdateCulling.dat" />
     <None Include="Resources\Patch Files\UIHideECodes.dat" />
+    <None Include="Resources\Patch Files\UIHideECodesHook.dat" />
     <None Include="Resources\Patch Files\UIHideMenus.dat" />
     <None Include="Resources\Patch Files\UIHideScreenNotifications.dat" />
     <None Include="Resources\Patch Files\UIHideSubpalette.dat" />

@@ -13,22 +13,25 @@ bind0					DWORD		b0+2
 .CODE
 
 UIHideECodes:
-	mov ecx, [edi+esi*4+24]
+	mov ecx, [esp+08]
+	mov [ecx+000000BC],00000001
 b0:	test byte ptr ds:[NO_ADDRESS], FLAG0_HIDE_ECODES
 	je d0
-	mov edx, [ecx+58]
-	mov [edx+40], 0FFFFFFFF
-	mov [edx+58], 00000000
+	mov ecx, [ecx+44]
+	mov ecx, [ecx+58]
+	mov [ecx+40], 0FFFFFFFF
+	mov [ecx+58], 00000000
 	mov eax, [ecx]
-	call dword ptr [eax+04]
-	jmp d2
-d0:	cmp dword ptr [ebp+0C], 2E
-	ja d1
-	nop
-	nop
+	call dword ptr[eax+04]
+	mov eax, [esp+04]
+	mov ecx, [esp+08]
+	mov ecx, [ecx+eax*4+24]
+	mov ecx, [ecx+58]
+	mov [ecx+40], 0FFFFFFFF
+	mov [ecx+58], 00000000
+	mov eax, [ecx]
+	call dword ptr[eax+04]
+d0:	ret 0008
 UIHideECodes_End:
-
-d1 = UIHideECodes+6A0
-d2 = UIHideECodes+6D8
 
 END
