@@ -44,8 +44,6 @@ namespace ArksModTool
         private KeyboardState m_curKeystate = null;
         private KeyboardState m_lastKeystate = null;
 
-        private bool m_contextClose = false;
-
         public Form1()
         {
             InitializeComponent();
@@ -196,7 +194,7 @@ namespace ArksModTool
 
         private void Form1_FormClosing(object sender, FormClosingEventArgs e)
         {
-            if (Program.Settings.CloseToTray && !m_contextClose)
+            if (Program.Settings.CloseToTray && e.CloseReason == CloseReason.UserClosing)
             {
                 e.Cancel = true;
                 this.WindowState = FormWindowState.Minimized;
@@ -293,7 +291,6 @@ namespace ArksModTool
 
         private void exitToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            m_contextClose = true;
             Application.Exit();
         }
 
