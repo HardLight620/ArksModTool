@@ -298,6 +298,16 @@ namespace ArksModTool.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Fri, 05 Aug 2016 00:32:34 GMT 
+        ///.
+        /// </summary>
+        internal static string time {
+            get {
+                return ResourceManager.GetString("time", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized resource of type System.Byte[].
         /// </summary>
         internal static byte[] ToggleFarCulling {

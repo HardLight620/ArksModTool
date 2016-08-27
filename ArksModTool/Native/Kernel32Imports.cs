@@ -87,6 +87,9 @@ internal static class Kernel32Imports
 
     [DllImport("kernel32.dll", SetLastError = true)]
     internal static extern bool FreeLibrary(IntPtr hModule);
+
+    [DllImport("kernel32.dll", SetLastError = true, CharSet = CharSet.Auto)]
+    internal static extern bool CreateProcess(string lpApplicationName, string lpCommandLine, IntPtr lpProcessAttributes, IntPtr lpThreadAttributes, bool bInheritHandles, uint dwCreationFlags, IntPtr lpEnvironment, string lpCurrentDirectory, ref STARTUPINFO lpStartupInfo, out PROCESS_INFORMATION lpProcessInformation);
 }
 
 [Flags]
@@ -117,6 +120,38 @@ internal struct PROCESSENTRY32
     public UInt32 dwFlags;
     [MarshalAs(UnmanagedType.ByValTStr, SizeConst = MAX_PATH)]
     public string szExeFile;
+}
+
+[StructLayout(LayoutKind.Sequential, CharSet = CharSet.Unicode)]
+internal struct STARTUPINFO
+{
+    public Int32 cb;
+    public string lpReserved;
+    public string lpDesktop;
+    public string lpTitle;
+    public Int32 dwX;
+    public Int32 dwY;
+    public Int32 dwXSize;
+    public Int32 dwYSize;
+    public Int32 dwXCountChars;
+    public Int32 dwYCountChars;
+    public Int32 dwFillAttribute;
+    public Int32 dwFlags;
+    public Int16 wShowWindow;
+    public Int16 cbReserved2;
+    public IntPtr lpReserved2;
+    public IntPtr hStdInput;
+    public IntPtr hStdOutput;
+    public IntPtr hStdError;
+}
+
+[StructLayout(LayoutKind.Sequential)]
+internal struct PROCESS_INFORMATION
+{
+    public IntPtr hProcess;
+    public IntPtr hThread;
+    public int dwProcessId;
+    public int dwThreadId;
 }
 
 [Flags]

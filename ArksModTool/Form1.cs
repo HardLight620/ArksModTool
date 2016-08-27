@@ -4,18 +4,20 @@ using System.ComponentModel;
 using System.Data;
 using System.Diagnostics;
 using System.Drawing;
+using System.IO;
 using System.Linq;
+using System.Net;
+using System.Reflection;
 using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-using System.Reflection;
-
 using SharpDX;
 using SharpDX.DirectInput;
 
 using Color = System.Drawing.Color;
+using Point = System.Drawing.Point;
 
 using Resources = ArksModTool.Properties.Resources;
 
@@ -27,7 +29,7 @@ namespace ArksModTool
         public static readonly uint PCOMMDATA = 0x03CF7E00;
         public static readonly uint ORIGINAL_CRC = 0xE9250FE4;
         public static readonly uint PATCHED_CRC = 0xFEB14502;
-        
+
         private int m_pso2PID = 0;
         private IntPtr m_pso2HWND = IntPtr.Zero;
         private bool m_gameReplied = false;
@@ -78,6 +80,9 @@ namespace ArksModTool
             hkselHideUI.SetEditPanel(popupPanel1);
             hkselToggleMode.Value = Program.Settings.ToggleInputModeHotkey;
             hkselToggleMode.SetEditPanel(popupPanel1);
+
+            upclientBackground.UpdateServer = Program.Settings.UpdateServer;
+            upclientForeground.UpdateServer = Program.Settings.UpdateServer;
         }
 
         private void InitializeBindings()
@@ -94,6 +99,8 @@ namespace ArksModTool
             CreateSettingBinding(chkHideHud, "Checked", "HideHud");
             CreateSettingBinding(chkMinimzeToTray, "Checked", "MinimizeToTray");
             CreateSettingBinding(chkCloseToTray, "Checked", "CloseToTray");
+            CreateSettingBinding(chkAutomaticUpdates, "Checked", "AutomaticUpdates");
+            CreateSettingBinding(chkPromptOnUpdate, "Checked", "PromptOnUpdate");
             CreateSettingBinding(radRunning, "Checked", "RunEnabled");
             CreateSettingBinding(radWalking, "Checked", "WalkEnabled");
             CreateSettingBinding(numRunInputScale, "Value", "RunInputScale");
@@ -169,6 +176,15 @@ namespace ArksModTool
             Log("Target  : pso2.exe v{0}.{1:D4}.{2}", PSO2VERSION.Major, PSO2VERSION.Minor, PSO2VERSION.Revision);
             Log("-------------------------------");
 
+            string[] args = Environment.GetCommandLineArgs();
+            string updateResult = args.SkipWhile(x => x != "-on_update").ElementAtOrDefault(1);
+            if (updateResult == "success")
+                Log("Arks Mod Tool has been updated.");
+            if (updateResult == "failure")
+                Log("WARNING: The last update attempt failed.");
+            else
+                tmrAppUpdate.Start();
+
             AllocationType allocType = AllocationType.Reserve | AllocationType.Commit;
             m_commBuffer = Kernel32Imports.VirtualAlloc(m_commBufferLocation, m_commBufferSize, allocType, MemoryProtection.ReadWrite);
             if (m_commBuffer.ToInt64() >= 0x100000000 || m_commBuffer == IntPtr.Zero)
@@ -179,7 +195,7 @@ namespace ArksModTool
             }
 
             WriteOutgoing();
-            
+
             Log("Waiting for PSO2 to launch...");
             SetStatus("Waiting...", Color.Black);
 
@@ -266,10 +282,9 @@ namespace ArksModTool
             numBlueBalance.DataBindings.Cast<Binding>().ForEach((Binding binding) => binding.ReadValue());
         }
 
-        private void linkProjectPage_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        private void btnInfoMenu_Click(object sender, EventArgs e)
         {
-            Process.Start(Program.ProjectPage);
-            linkProjectPage.LinkVisited = true;
+            contextMenuStrip2.Show(btnInfoMenu, new Point(btnInfoMenu.Width, btnInfoMenu.Height), ToolStripDropDownDirection.BelowLeft);
         }
 
         private void notifyIcon1_MouseClick(object sender, MouseEventArgs e)
@@ -282,6 +297,22 @@ namespace ArksModTool
             }
         }
 
+        private void openProjectPageToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Process.Start(Updater.PROJECT_PAGE);
+        }
+
+        private void checkForUpdatesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Log("Checking for updates...");
+
+            progressBar1.Value = 0;
+            progressBar1.Visible = true;
+            checkForUpdatesToolStripMenuItem.Enabled = false;
+
+            upclientForeground.CheckForUpdate().ContinueWithThisContext(OnUpdateCheckCompleted);
+        }
+
         private void restoreToolStripMenuItem_Click(object sender, EventArgs e)
         {
             this.Show();
@@ -292,6 +323,14 @@ namespace ArksModTool
         private void exitToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Application.Exit();
+        }
+
+        private void upclientForeground_DownloadProgressChanged(object sender, DownloadProgressChangedEventArgs e)
+        {
+            progressBar1.Maximum++;
+            progressBar1.Value = progressBar1.Maximum;
+            progressBar1.Value = e.ProgressPercentage;
+            progressBar1.Maximum--;
         }
 
         private void tmrScan_Tick(object sender, EventArgs e)
@@ -313,7 +352,6 @@ namespace ArksModTool
 
                 if (isOkay)
                 {
-                    Log("Patches applied.");
                     Log("Waiting for response...");
                     SetStatus("Waiting For Response...", Color.DarkGoldenrod);
                     SetIcon(Resources.icon_idle);
@@ -334,6 +372,18 @@ namespace ArksModTool
             ReadIncoming();
 
             UpdateStatus();
+        }
+
+
+        private void tmrAppUpdate_Tick(object sender, EventArgs e)
+        {
+            if (!Program.Settings.AutomaticUpdates || m_gameReplied)
+                return;
+
+            if (upclientBackground.IsBusy)
+                return;
+
+            upclientBackground.CheckForUpdate().ContinueWithThisContext(OnUpdateCheckCompletedBackground);
         }
 
         private void ReadInput()
@@ -407,7 +457,7 @@ namespace ArksModTool
             float redBalance = 1.0f + Program.Settings.RedBalance;
             float greenBalance = 1.0f + Program.Settings.GreenBalance;
             float blueBalance = 1.0f + Program.Settings.BlueBalance;
-            
+
             AdjustmentFlags adjustments = AdjustmentFlags.None;
             adjustments |= (Program.Settings.DisableIntroVideo ? AdjustmentFlags.DisableIntro : 0);
             adjustments |= (Program.Settings.HideUI ? AdjustmentFlags.HideUI : 0);
@@ -467,6 +517,13 @@ namespace ArksModTool
                 SetStatus("Waiting...", Color.DarkGoldenrod);
                 SetIcon(Resources.icon_idle);
                 tmrScan.Start();
+            }
+
+            if (time > 10)
+            {
+                SetStatus("Waiting...", Color.Black);
+                SetIcon(Resources.icon);
+                m_gameReplied = false;
             }
         }
 
@@ -628,7 +685,7 @@ namespace ArksModTool
         private bool ApplyGamePatches(IntPtr handle)
         {
             bool isOkay = true;
-            
+
             isOkay &= isOkay && ApplyGamePatch(handle, Resources.ToggleIntroVideo);
 
             isOkay &= isOkay && ApplyGamePatch(handle, Resources.ToggleNearCulling);
@@ -637,14 +694,14 @@ namespace ArksModTool
             isOkay &= isOkay && ApplyGamePatch(handle, Resources.ToggleUpdateCulling);
             isOkay &= isOkay && ApplyGamePatch(handle, Resources.ToggleLOD);
             isOkay &= isOkay && ApplyGamePatch(handle, Resources.ToggleLODHook);
-            
-            
+
+
             isOkay &= isOkay && ApplyGamePatch(handle, Resources.UIHideMenus);
             isOkay &= isOkay && ApplyGamePatch(handle, Resources.UIHideSubpalette);
             isOkay &= isOkay && ApplyGamePatch(handle, Resources.UIHideScreenNotifications);
             isOkay &= isOkay && ApplyGamePatch(handle, Resources.UIHideECodes);
             isOkay &= isOkay && ApplyGamePatch(handle, Resources.UIHideECodesHook);
-            
+
             isOkay &= isOkay && ApplyGamePatch(handle, Resources.InputScaleNormal);
             isOkay &= isOkay && ApplyGamePatch(handle, Resources.InputScaleAuto);
 
@@ -660,7 +717,7 @@ namespace ArksModTool
 
             isOkay &= isOkay && ApplyGamePatch(handle, Resources.ColorAdjustments);
             isOkay &= isOkay && ApplyGamePatch(handle, Resources.ColorAdjustmentsHook);
-            
+
             return isOkay;
         }
 
@@ -736,11 +793,13 @@ namespace ArksModTool
         private void Log(string str)
         {
             txtLog.Text += str + Environment.NewLine;
+            txtLog.Select(txtLog.Text.Length, 0);
+            txtLog.ScrollToCaret();
         }
 
         private void Log(string format, params object[] args)
         {
-            txtLog.Text += string.Format(format, args) + Environment.NewLine;
+            Log(string.Format(format, args));
         }
 
         private int LogLastWin32Error(string context)
@@ -765,9 +824,136 @@ namespace ArksModTool
         {
             foreach (Form form in Application.OpenForms)
                 form.Icon = icon;
-            
+
             notifyIcon1.Icon = icon;
             Program.Icon = icon;
+        }
+
+        private void FlashWindow()
+        {
+            const UInt32 FLASHW_ALL = 0x00000003;
+            const UInt32 FLASHW_TIMERNOFG = 0x0000000C;
+
+            FLASHWINFO fwi;
+            fwi.cbSize = (UInt32)Marshal.SizeOf(typeof(FLASHWINFO));
+            fwi.hwnd = this.Handle;
+            fwi.dwFlags = FLASHW_ALL | FLASHW_TIMERNOFG;
+            fwi.uCount = 0;
+            fwi.dwTimeout = 0;
+
+            User32Imports.FlashWindowEx(ref fwi);
+        }
+
+        private void OnUpdateCheckCompleted(Task<bool> task)
+        {
+            progressBar1.Visible = false;
+            checkForUpdatesToolStripMenuItem.Enabled = true;
+
+            if (task.IsCancelledEx())
+            {
+                Log("Update Error - Cancelled");
+                return;
+            }
+
+            if (task.IsFaulted)
+            {
+                Exception ex = task.Exception.GetBaseException();
+                Log("Update Error - {0}", ex.Message);
+                MessageBox.Show(string.Format("ERROR: Unable to check for updates.\n{0}", ex.Message), "Update Error");
+                return;
+            }
+
+            if (!task.Result)
+            {
+                Log("Arks Mod Tool is up to date");
+                return;
+            }
+
+            tmrAppUpdate.Stop();
+            PromptUpdate();
+        }
+
+        private async void OnUpdateCheckCompletedBackground(Task<bool> task)
+        {
+            if (task.IsFaulted || !task.Result)
+                return;
+
+            tmrAppUpdate.Stop();
+
+            if (Program.Settings.PromptOnUpdate)
+            {
+                if (!this.ContainsFocus)
+                {
+                    if (this.WindowState == FormWindowState.Minimized && !this.Visible)
+                        this.Show();
+
+                    FlashWindow();
+
+                    TaskCompletionSource<object> signal = new TaskCompletionSource<object>(null);
+                    EventHandler evt = (object s2, EventArgs e2) => { signal.SetResult(null); };
+                    this.Activated += evt;
+                    await signal.Task;
+                    this.Activated -= evt;
+
+                    if (this.WindowState != FormWindowState.Maximized)
+                        User32Imports.ShowWindow(this.Handle, ShowWindowCommands.ShowNoActivate);
+                }
+
+                PromptUpdate();
+            }
+            else
+            {
+                DoUpdate();
+            }
+        }
+
+        private void OnDownloadCompleted(Task<string> task)
+        {
+            checkForUpdatesToolStripMenuItem.Enabled = true;
+            progressBar1.Visible = false;
+
+            if (task.IsCancelledEx())
+            {
+                Log("Update Error - Cancelled");
+                return;
+            }
+
+            if (task.IsFaulted)
+            {
+                Exception ex = task.Exception.GetBaseException();
+                Log("Update Error - {0}", ex.Message);
+
+                DialogResult result = MessageBox.Show(string.Format("ERROR: Could not retrieve update package.\n{0}", ex.Message), "Update Error", MessageBoxButtons.RetryCancel);
+                if (result == DialogResult.Retry)
+                    DoUpdate();
+
+                return;
+            }
+
+            Updater.UpdatePackage = task.Result;
+            Updater.RestartState = this.WindowState;
+            Application.Exit();
+        }
+
+        private void PromptUpdate()
+        {
+            Log("A new version of AMT is available");
+            DialogResult result = MessageBox.Show("A new version of Arks Mod Tool is available. Install?", "Update", MessageBoxButtons.YesNo);
+            if (result == DialogResult.Yes)
+                DoUpdate();
+        }
+
+        private void DoUpdate()
+        {
+            checkForUpdatesToolStripMenuItem.Enabled = false;
+            progressBar1.Visible = true;
+            progressBar1.Value = 0;
+
+            Log("Downloading update files...");
+
+            string appName = Path.GetFileNameWithoutExtension(Assembly.GetExecutingAssembly().Location);
+            string packageName = string.Format("{0}_Update.zip", appName);
+            upclientForeground.DownloadUpdate(packageName).ContinueWithThisContext(OnDownloadCompleted);
         }
 
         [Flags]

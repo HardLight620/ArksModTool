@@ -147,13 +147,15 @@
             this.chkCustomizeColors = new System.Windows.Forms.CheckBox();
             this.labelRuler16 = new ArksModTool.LabelRuler();
             this.pagePreferences = new System.Windows.Forms.TabPage();
+            this.chkPromptOnUpdate = new System.Windows.Forms.CheckBox();
+            this.chkAutomaticUpdates = new System.Windows.Forms.CheckBox();
             this.labelRuler14 = new ArksModTool.LabelRuler();
             this.chkCloseToTray = new System.Windows.Forms.CheckBox();
             this.chkMinimzeToTray = new System.Windows.Forms.CheckBox();
             this.labelRuler13 = new ArksModTool.LabelRuler();
             this.pageInfo = new System.Windows.Forms.TabPage();
-            this.linkProjectPage = new System.Windows.Forms.LinkLabel();
             this.txtLog = new System.Windows.Forms.TextBox();
+            this.btnInfoMenu = new System.Windows.Forms.Button();
             this.pageFOV = new System.Windows.Forms.TabPage();
             this.label13 = new System.Windows.Forms.Label();
             this.numFovNPCTalk = new System.Windows.Forms.NumericUpDown();
@@ -167,6 +169,13 @@
             this.labelRuler8 = new ArksModTool.LabelRuler();
             this.labelRuler7 = new ArksModTool.LabelRuler();
             this.pageBlank = new System.Windows.Forms.TabPage();
+            this.progressBar1 = new System.Windows.Forms.ProgressBar();
+            this.tmrAppUpdate = new System.Windows.Forms.Timer(this.components);
+            this.contextMenuStrip2 = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.openProjectPageToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.checkForUpdatesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.upclientForeground = new ArksModTool.UpdateClient();
+            this.upclientBackground = new ArksModTool.UpdateClient();
             this.contextMenuStrip1.SuspendLayout();
             this.popupPanel1.SuspendLayout();
             this.pageControl1.SuspendLayout();
@@ -221,6 +230,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.trackFovTPS)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numFovNormal)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.trackFovNormal)).BeginInit();
+            this.contextMenuStrip2.SuspendLayout();
             this.SuspendLayout();
             // 
             // lblStatus
@@ -1657,6 +1667,8 @@
             // 
             // pagePreferences
             // 
+            this.pagePreferences.Controls.Add(this.chkPromptOnUpdate);
+            this.pagePreferences.Controls.Add(this.chkAutomaticUpdates);
             this.pagePreferences.Controls.Add(this.labelRuler14);
             this.pagePreferences.Controls.Add(this.chkCloseToTray);
             this.pagePreferences.Controls.Add(this.chkMinimzeToTray);
@@ -1668,11 +1680,31 @@
             this.pagePreferences.TabIndex = 9;
             this.pagePreferences.Text = "Preferences";
             // 
+            // chkPromptOnUpdate
+            // 
+            this.chkPromptOnUpdate.AutoSize = true;
+            this.chkPromptOnUpdate.Location = new System.Drawing.Point(20, 99);
+            this.chkPromptOnUpdate.Name = "chkPromptOnUpdate";
+            this.chkPromptOnUpdate.Size = new System.Drawing.Size(114, 17);
+            this.chkPromptOnUpdate.TabIndex = 5;
+            this.chkPromptOnUpdate.Text = "&Prompt On Update";
+            this.chkPromptOnUpdate.UseVisualStyleBackColor = true;
+            // 
+            // chkAutomaticUpdates
+            // 
+            this.chkAutomaticUpdates.AutoSize = true;
+            this.chkAutomaticUpdates.Location = new System.Drawing.Point(20, 76);
+            this.chkAutomaticUpdates.Name = "chkAutomaticUpdates";
+            this.chkAutomaticUpdates.Size = new System.Drawing.Size(116, 17);
+            this.chkAutomaticUpdates.TabIndex = 4;
+            this.chkAutomaticUpdates.Text = "&Automatic Updates";
+            this.chkAutomaticUpdates.UseVisualStyleBackColor = true;
+            // 
             // labelRuler14
             // 
             this.labelRuler14.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.labelRuler14.Location = new System.Drawing.Point(0, 75);
+            this.labelRuler14.Location = new System.Drawing.Point(0, 122);
             this.labelRuler14.Name = "labelRuler14";
             this.labelRuler14.Size = new System.Drawing.Size(218, 13);
             this.labelRuler14.TabIndex = 3;
@@ -1709,25 +1741,13 @@
             // 
             // pageInfo
             // 
-            this.pageInfo.Controls.Add(this.linkProjectPage);
             this.pageInfo.Controls.Add(this.txtLog);
+            this.pageInfo.Controls.Add(this.btnInfoMenu);
             this.pageInfo.Location = new System.Drawing.Point(0, 0);
             this.pageInfo.Name = "pageInfo";
             this.pageInfo.Size = new System.Drawing.Size(218, 251);
             this.pageInfo.TabIndex = 3;
             this.pageInfo.Text = "Info";
-            // 
-            // linkProjectPage
-            // 
-            this.linkProjectPage.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.linkProjectPage.AutoSize = true;
-            this.linkProjectPage.Location = new System.Drawing.Point(153, 238);
-            this.linkProjectPage.Name = "linkProjectPage";
-            this.linkProjectPage.Size = new System.Drawing.Size(68, 13);
-            this.linkProjectPage.TabIndex = 1;
-            this.linkProjectPage.TabStop = true;
-            this.linkProjectPage.Text = "Project Page";
-            this.linkProjectPage.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkProjectPage_LinkClicked);
             // 
             // txtLog
             // 
@@ -1744,6 +1764,18 @@
             this.txtLog.Size = new System.Drawing.Size(218, 235);
             this.txtLog.TabIndex = 0;
             this.txtLog.WordWrap = false;
+            // 
+            // btnInfoMenu
+            // 
+            this.btnInfoMenu.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnInfoMenu.FlatStyle = System.Windows.Forms.FlatStyle.System;
+            this.btnInfoMenu.Location = new System.Drawing.Point(144, 234);
+            this.btnInfoMenu.Name = "btnInfoMenu";
+            this.btnInfoMenu.Size = new System.Drawing.Size(75, 17);
+            this.btnInfoMenu.TabIndex = 1;
+            this.btnInfoMenu.Text = "&v";
+            this.btnInfoMenu.UseVisualStyleBackColor = true;
+            this.btnInfoMenu.Click += new System.EventHandler(this.btnInfoMenu_Click);
             // 
             // pageFOV
             // 
@@ -1929,11 +1961,62 @@
             this.pageBlank.TabIndex = 6;
             this.pageBlank.Text = "Blank";
             // 
+            // progressBar1
+            // 
+            this.progressBar1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.progressBar1.Location = new System.Drawing.Point(13, 300);
+            this.progressBar1.Name = "progressBar1";
+            this.progressBar1.Size = new System.Drawing.Size(343, 23);
+            this.progressBar1.TabIndex = 5;
+            this.progressBar1.Visible = false;
+            // 
+            // tmrAppUpdate
+            // 
+            this.tmrAppUpdate.Interval = 5000;
+            this.tmrAppUpdate.Tick += new System.EventHandler(this.tmrAppUpdate_Tick);
+            // 
+            // contextMenuStrip2
+            // 
+            this.contextMenuStrip2.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.openProjectPageToolStripMenuItem,
+            this.checkForUpdatesToolStripMenuItem});
+            this.contextMenuStrip2.Name = "contextMenuStrip2";
+            this.contextMenuStrip2.Size = new System.Drawing.Size(174, 48);
+            // 
+            // openProjectPageToolStripMenuItem
+            // 
+            this.openProjectPageToolStripMenuItem.Name = "openProjectPageToolStripMenuItem";
+            this.openProjectPageToolStripMenuItem.Size = new System.Drawing.Size(173, 22);
+            this.openProjectPageToolStripMenuItem.Text = "&Open Project Page";
+            this.openProjectPageToolStripMenuItem.Click += new System.EventHandler(this.openProjectPageToolStripMenuItem_Click);
+            // 
+            // checkForUpdatesToolStripMenuItem
+            // 
+            this.checkForUpdatesToolStripMenuItem.Name = "checkForUpdatesToolStripMenuItem";
+            this.checkForUpdatesToolStripMenuItem.Size = new System.Drawing.Size(173, 22);
+            this.checkForUpdatesToolStripMenuItem.Text = "&Check For Updates";
+            this.checkForUpdatesToolStripMenuItem.Click += new System.EventHandler(this.checkForUpdatesToolStripMenuItem_Click);
+            // 
+            // upclientForeground
+            // 
+            this.upclientForeground.TimeStampFile = "time.txt";
+            this.upclientForeground.UpdateFile = "ArksModTool.zip";
+            this.upclientForeground.UpdateServer = null;
+            this.upclientForeground.DownloadProgressChanged += new System.Net.DownloadProgressChangedEventHandler(this.upclientForeground_DownloadProgressChanged);
+            // 
+            // upclientBackground
+            // 
+            this.upclientBackground.TimeStampFile = "time.txt";
+            this.upclientBackground.UpdateFile = "ArksModTool.zip";
+            this.upclientBackground.UpdateServer = null;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(369, 329);
+            this.Controls.Add(this.progressBar1);
             this.Controls.Add(this.popupPanel1);
             this.Controls.Add(this.pageControl1);
             this.Controls.Add(this.lblVersion);
@@ -2014,6 +2097,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.trackFovTPS)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numFovNormal)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.trackFovNormal)).EndInit();
+            this.contextMenuStrip2.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -2033,7 +2117,6 @@
         private System.Windows.Forms.CheckBox chkDisableFarCulling;
         private System.Windows.Forms.CheckBox chkDisableNearCulling;
         private System.Windows.Forms.CheckBox chkDisableIntro;
-        private System.Windows.Forms.LinkLabel linkProjectPage;
         private System.Windows.Forms.TextBox txtLog;
         private ArksModTool.LabelRuler labelRuler1;
         private System.Windows.Forms.TrackBar trackWalkInputScale;
@@ -2147,6 +2230,16 @@
         private LabelRuler labelRuler15;
         private System.Windows.Forms.CheckBox chkCustomizeColors;
         private LabelRuler labelRuler16;
+        private System.Windows.Forms.ProgressBar progressBar1;
+        private System.Windows.Forms.CheckBox chkAutomaticUpdates;
+        private System.Windows.Forms.CheckBox chkPromptOnUpdate;
+        private System.Windows.Forms.Timer tmrAppUpdate;
+        private System.Windows.Forms.Button btnInfoMenu;
+        private System.Windows.Forms.ContextMenuStrip contextMenuStrip2;
+        private System.Windows.Forms.ToolStripMenuItem openProjectPageToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem checkForUpdatesToolStripMenuItem;
+        private UpdateClient upclientForeground;
+        private UpdateClient upclientBackground;
     }
 }
 

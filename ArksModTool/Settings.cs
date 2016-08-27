@@ -62,6 +62,10 @@ namespace ArksModTool
         public bool MinimizeToTray { get { return m_minimizeToTray; } set { m_minimizeToTray = value; } }
         public bool CloseToTray { get { return m_closeToTray; } set { m_closeToTray = value; } }
 
+        public string UpdateServer { get { return m_updateServer; } set { m_updateServer = value; } }
+        public bool AutomaticUpdates { get { return m_automaticUpdates; } set { m_automaticUpdates = value; } }
+        public bool PromptOnUpdate { get { return m_promptOnUpdate; } set { m_promptOnUpdate = value; } }
+
         private string[] m_targetProcesses = new string[] { "pso2", "pso2_nogg_multi" };
 
         private bool m_disableIntroVideo = false;
@@ -106,6 +110,10 @@ namespace ArksModTool
 
         private bool m_minimizeToTray = false;
         private bool m_closeToTray = false;
+
+        private string m_updateServer = Updater.DEFAULT_SERVER_BUILD;
+        private bool m_automaticUpdates = true;
+        private bool m_promptOnUpdate = true;
 
         // No Save
         private bool m_walkEnabled = false;
@@ -159,6 +167,10 @@ namespace ArksModTool
 
             m_minimizeToTray = false;
             m_closeToTray = false;
+
+            m_updateServer = Updater.DEFAULT_SERVER_BUILD;
+            m_automaticUpdates = true;
+            m_promptOnUpdate = true;
         }
 
         public bool Save(string path)
@@ -210,6 +222,9 @@ namespace ArksModTool
 
             settings.Add(string.Format("{0, -25} : {1}", "Minimize To Tray", m_minimizeToTray));
             settings.Add(string.Format("{0, -25} : {1}", "Close To Tray", m_closeToTray));
+            settings.Add(string.Format("{0, -25} : {1}", "Update Server", m_updateServer));
+            settings.Add(string.Format("{0, -25} : {1}", "Automatic Updates", m_automaticUpdates));
+            settings.Add(string.Format("{0, -25} : {1}", "Prompt On Update", m_promptOnUpdate));
             
             try
             {
@@ -284,6 +299,10 @@ namespace ArksModTool
 
                         case "Minimize To Tray":        bool.TryParse(kvp.Value, out settings.m_minimizeToTray); break;
                         case "Close To Tray":           bool.TryParse(kvp.Value, out settings.m_closeToTray); break;
+
+                        case "Update Server":           TryParseUriPath(kvp.Value, out settings.m_updateServer); break;
+                        case "Automatic Updates":       bool.TryParse(kvp.Value, out settings.m_automaticUpdates); break;
+                        case "Prompt On Update":        bool.TryParse(kvp.Value, out settings.m_promptOnUpdate); break;
                     }
                 }
 
@@ -321,6 +340,26 @@ namespace ArksModTool
                 result = defaultValue;
                 return false;
             }
+        }
+
+        private static bool TryParseUriPath(string uriPath, out string result)
+        {
+            Uri uri;
+            if (Uri.TryCreate(uriPath, UriKind.Absolute, out uri) && uri.Scheme != Uri.UriSchemeFile)
+            {
+                result = uri.AbsoluteUri;
+                return true;
+            }
+
+            try
+            {
+                result = Path.GetFullPath(uriPath);
+                return true;
+            }
+            catch (Exception) { }
+
+            result = uriPath;
+            return false;
         }
 
         #endregion

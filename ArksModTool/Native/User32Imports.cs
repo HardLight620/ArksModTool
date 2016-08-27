@@ -43,6 +43,9 @@ internal static class User32Imports
     [DllImport("user32.dll", SetLastError = true)]
     internal static extern IntPtr SendMessage(IntPtr hWnd, UInt32 Msg, IntPtr wParam, IntPtr lParam);
 
+    [DllImport("user32.dll")]
+    internal static extern bool FlashWindowEx(ref FLASHWINFO pwfi);
+
 
     internal const int GWL_HWNDPARENT = -8;
     internal const int GWL_ID = -12;
@@ -283,4 +286,14 @@ internal enum RedrawWindowFlags : uint
     Frame = 0x400,
 
     NoFrame = 0x800
+}
+
+[StructLayout(LayoutKind.Sequential)]
+public struct FLASHWINFO
+{
+    public UInt32 cbSize;
+    public IntPtr hwnd;
+    public UInt32 dwFlags;
+    public UInt32 uCount;
+    public UInt32 dwTimeout;
 }
