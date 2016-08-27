@@ -14,12 +14,12 @@ bind2						DWORD		b2+4
 .CODE
 
 InputScaleNormal:
-	movaps xmm2, xmm1
-	movaps xmm3, xmm1
-	movaps xmm4, xmm1
-	shufps xmm2, xmm1, 00
-	shufps xmm3, xmm1, 55
-	shufps xmm4, xmm1, 0AA
+	movaps xmm2, xmm0
+	movaps xmm3, xmm0
+	movaps xmm4, xmm0
+	shufps xmm2, xmm0, 00
+	shufps xmm3, xmm0, 55
+	shufps xmm4, xmm0, 0AA
 	addps xmm2, xmm4
 	addps xmm2, xmm3
 	sqrtps xmm2, xmm2
@@ -28,8 +28,10 @@ b0:	mulss xmm3, dword ptr ds:[NO_ADDRESS]
 b1:	minss xmm3, dword ptr ds:[NO_ADDRESS]
 b2:	maxss xmm3, dword ptr ds:[NO_ADDRESS]
 	shufps xmm3, xmm3, 00
-	divps xmm0, xmm2
-	mulps xmm0, xmm3
+	divps xmm1, xmm2
+	mulps xmm1, xmm3
+	mov eax, [ebp+8]
+	movaps [eax], xmm1
 	nopx 21
 InputScaleNormal_End:
 

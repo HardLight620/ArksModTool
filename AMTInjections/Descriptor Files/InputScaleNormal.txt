@@ -1,8 +1,8 @@
-Addr : tag,				[bytes], 0F 28 D1 0F 28 E1 0F C6 D1 09 0F 28 D9 0F C6 D9 12 0F 28 F9 0F C6 F9 55 F3 0F 58 E2 66 0F EF D2
+Addr : tag,				[bytes], 1, 0F 28 D0 0F 28 E0 0F C6 D0 09 0F 28 D8 0F C6 D8 12 0F 28 F8 0F C6 F8 55 F3 0F 58 E2 66 0F EF D2
 Addr : pPatch,			[addr], tag, +0
 Addr : modInputScale,	[addr], $data, +44
 Addr : pValue1,			[wptr], tag, +3E
-Addr : pValue2,			[wptr], tag, +51
+Addr : pValue2,			[wptr], tag, +54
 
 Base : pPatch
 

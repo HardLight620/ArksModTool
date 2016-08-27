@@ -14,7 +14,7 @@ bind0					DWORD		b0+2
 
 UIHideECodes:
 	mov ecx, [esp+08]
-	mov [ecx+000000BC],00000001
+	mov [ecx+000000CC],00000001
 b0:	test byte ptr ds:[NO_ADDRESS], FLAG0_HIDE_ECODES
 	je d0
 	mov ecx, [ecx+44]
