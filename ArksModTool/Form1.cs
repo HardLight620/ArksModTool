@@ -25,10 +25,10 @@ namespace ArksModTool
 {
     public partial class Form1 : Form
     {
-        public static readonly Version PSO2VERSION = new Version(4, 0401, 0, 0);
-        public static readonly uint PCOMMDATA = 0x03CF7E00;
-        public static readonly uint ORIGINAL_CRC = 0xE9250FE4;
-        public static readonly uint PATCHED_CRC = 0xFEB14502;
+        public static readonly Version PSO2VERSION = new Version(4, 0402, 0, 0);
+        public static readonly uint PCOMMDATA = 0x03CFEE00;
+        public static readonly uint ORIGINAL_CRC = 0x751DC031;
+        public static readonly uint PATCHED_CRC = 0x2783AB00;
 
         private int m_pso2PID = 0;
         private IntPtr m_pso2HWND = IntPtr.Zero;
@@ -373,7 +373,6 @@ namespace ArksModTool
 
             UpdateStatus();
         }
-
 
         private void tmrAppUpdate_Tick(object sender, EventArgs e)
         {

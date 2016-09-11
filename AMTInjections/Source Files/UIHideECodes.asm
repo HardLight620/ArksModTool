@@ -17,7 +17,7 @@ UIHideECodes:
 	mov [ecx+000000CC],00000001
 b0:	test byte ptr ds:[NO_ADDRESS], FLAG0_HIDE_ECODES
 	je d0
-	mov ecx, [ecx+44]
+	mov ecx, [ecx+48]
 	mov ecx, [ecx+58]
 	mov [ecx+40], 0FFFFFFFF
 	mov [ecx+58], 00000000
