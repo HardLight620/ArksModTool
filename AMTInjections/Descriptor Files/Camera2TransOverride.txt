@@ -1,4 +1,4 @@
-Addr: tag,			[bytes], 85 C0 0F 84 52 F5 FF FF 8B C8 8D 97 80 00 00 00 52 FF 77 6C FF 77 68 56 53 57
+Addr: tag,			[bytes], 85 C0 0F 84 85 F7 FF FF 8B C8 8D 96 80 00 00 00 52 FF 76 6C FF 76 68 57 53 56
 Addr: pPatch,		[addr], tag, +56
 
 Addr: fnCam2Override,	[addr], $code, +580

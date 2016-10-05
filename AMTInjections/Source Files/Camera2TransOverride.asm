@@ -20,13 +20,13 @@ Camera2TransOverride:
 b0:	call NO_SYMBOL				; Camera2Override
 	add eax, 20
 	push eax
-	lea ecx, [esp+000000C8]
+	lea ecx, [esp+000000C4]
 	xor eax, eax
 	mov [ecx], eax
 b1:	call NO_SYMBOL
 	jmp d1
 	xor ebx, ebx
-d0:	mov dword ptr [esp+000000C4], 00000000
+d0:	mov dword ptr [esp+000000C0], 00000000
 d1:
 Camera2TransOverride_End:
 
