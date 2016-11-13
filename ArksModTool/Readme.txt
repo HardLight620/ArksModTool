@@ -1,6 +1,6 @@
 ﻿==
 === Arks Mod Tool
-=== Version 1.3d
+=== Version 1.3e
 ==
 
 A mod utility tool to provide various
@@ -92,6 +92,10 @@ authority.
 ==
 === Version History
 ==
+
+v1.3e:
+
+- Retargeted for client version 4.0502.2
 
 v1.3d:
 
