@@ -1,6 +1,4 @@
-Addr : $code,				[const], 03DCC100
-Addr : $data,				[const], 03DCCE00
-Addr : $pKernel32,			[const], 04CF055D
-Addr : $pGetProcAddress,	[const], 04CF0EF7
-
-Addr : $funcs,				[addr], $data, +100
+Addr : $code,				[const], 03E75100
+Addr : $data,				[const], 03E75E00
+Addr : $pKernel32,			[const], 04DA17C1
+Addr : $pGetProcAddress,	[const], 04DA3245
