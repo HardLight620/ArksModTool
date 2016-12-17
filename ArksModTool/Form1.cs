@@ -25,10 +25,10 @@ namespace ArksModTool
 {
     public partial class Form1 : Form
     {
-        public static readonly Version PSO2VERSION = new Version(4, 0601, 0, 0);
-        public static readonly uint PCOMMDATA = 0x03E75E00;
-        public static readonly uint ORIGINAL_CRC = 0x15EB7DD5;
-        public static readonly uint PATCHED_CRC = 0x54A2F7B9;
+        public static readonly Version PSO2VERSION = new Version(4, 0601, 0, 2);
+        public static readonly uint PCOMMDATA = 0x03E76E00;
+        public static readonly uint ORIGINAL_CRC = 0xB3909157;
+        public static readonly uint PATCHED_CRC = 0x2125D662;
 
         private int m_pso2PID = 0;
         private IntPtr m_pso2HWND = IntPtr.Zero;
@@ -38,8 +38,6 @@ namespace ArksModTool
         private IntPtr m_commBuffer = IntPtr.Zero;
         private IntPtr m_commBufferLocation = new IntPtr(0x48000000);
         private IntPtr m_commBufferSize = new IntPtr(0x100);
-
-        private List<IntPtr> m_oldAllocations = new List<IntPtr>();
 
         private DirectInput m_directInput = null;
         private Keyboard m_keyboard = null;
@@ -597,9 +595,6 @@ namespace ArksModTool
             isOkay = isOkay && ApplyGamePatch(handle, Resources.CommInit);
             isOkay = isOkay && ApplyGamePatch(handle, Resources.CommMain);
             isOkay = isOkay && ApplyGamePatch(handle, Resources.CommMainHook);
-
-            VirtualReleaseAll(handle, m_oldAllocations.ToArray());
-            m_oldAllocations.Clear();
 
             return isOkay;
         }

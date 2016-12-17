@@ -1,6 +1,6 @@
 ﻿==
 === Arks Mod Tool
-=== Version 1.3f
+=== Version 1.3g
 ==
 
 A mod utility tool to provide various
@@ -44,28 +44,30 @@ authority.
 === Known Bugs
 ==
 
-- Talking to the Extreme Quest Administrator
-  NPC Pudding to manually obtain your daily
-  Extreme Quest Pass with "Hide Screen
-  Nofications" ticked will cause the game
-  to soft lock.
+- Under certain conditions, viewing specific
+  events with the "Hide Screen Nofications"
+  ticked may cause the game to soft lock.
 
-- PSO2 appears to have a hard asset limit
-  built into the game. If too many assets
-  appear onscreen at once, some parts of
-  ingame models may appear absent.
+- If too many assets appear onscreen at
+  once, some parts of ingame models may
+  appear absent.
 
 - Color adjustments will only be applied
   on graphics settings greater than 1.
 
+- AIS and Rideroid camera distances will
+  be incorrect when custom camera
+  positioning is enabled.
+
+- Gamepad camera rotation speed does not
+  account for distance when using customized
+  cameras. As a result, rotation speed will
+  be slower when zoomed out and faster when
+  zoomed in.
+
 ==
 === Notes
 ==
-
-- Usually, the mod tool must be running
-  before launching PSO2. In these cases,
-  the mod tool cannot connect to PSO2 while
-  it is already running.
 
 - If attempting to run the mod tool
   causes it to throw an error and close,
@@ -89,9 +91,20 @@ authority.
   an object is larger than its visible
   geometry.
 
+- "Update Culling" is a made up term that
+  refers to the way objects that are far
+  away from the player will have a reduced
+  refresh rate in their animations and
+  movements. It becomes more noticeable when
+  you have far culling disabled.
+
 ==
 === Version History
 ==
+
+v1.3g:
+
+- Retargeted for client version 4.0601.2
 
 v1.3f:
 
