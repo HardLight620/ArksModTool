@@ -1,4 +1,4 @@
-Addr : $code,				[const], 03E76100
-Addr : $data,				[const], 03E76E00
-Addr : $pKernel32,			[const], 04DA2B95
-Addr : $pGetProcAddress,	[const], 04DA42B9
+Addr : $code,				[const], 03ED5100
+Addr : $data,				[const], 03ED5E00
+Addr : $pKernel32,			[const], 04E08731
+Addr : $pGetProcAddress,	[const], 04E09F98

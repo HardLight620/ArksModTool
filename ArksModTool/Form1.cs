@@ -25,10 +25,10 @@ namespace ArksModTool
 {
     public partial class Form1 : Form
     {
-        public static readonly Version PSO2VERSION = new Version(4, 0601, 0, 3);
-        public static readonly uint PCOMMDATA = 0x03E76E00;
-        public static readonly uint ORIGINAL_CRC = 0x40A9BEBB;
-        public static readonly uint PATCHED_CRC = 0x0436FF05;
+        public static readonly Version PSO2VERSION = new Version(4, 0701, 0, 0);
+        public static readonly uint PCOMMDATA = 0x03ED5E00;
+        public static readonly uint ORIGINAL_CRC = 0xB2B03223;
+        public static readonly uint PATCHED_CRC = 0x9512BDBC;
 
         private int m_pso2PID = 0;
         private IntPtr m_pso2HWND = IntPtr.Zero;
