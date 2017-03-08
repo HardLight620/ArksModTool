@@ -1,4 +1,4 @@
-Addr : tag,			[bytes], F3 0F 10 86 CC 00 00 00 0F 28 D8 83 78 30 00 74
+Addr : tag,			[bytes], F3 0F 10 86 CC 00 00 00 0F 28 D8 83 78 40 00 74
 Addr : hook,		[addr], tag, +0
 Addr : hookFunc,	[addr], $code, +300
 

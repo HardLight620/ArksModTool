@@ -1,4 +1,4 @@
-Addr : tag, 			[bytes], 0F 84 BD 03 00 00 F2 0F 5A C9 50
+Addr : tag, 			[bytes], 0F 84 77 03 00 00 F2 0F 5A C9 50
 Addr : fnInit,			[addr], $code, +80
 Addr : fnGameUpdate,	[offs], tag, +13
 Addr : pPatch,			[addr], $code, +0

@@ -23,7 +23,7 @@ b1:	mov ecx, ds:[NO_ADDRESS]
 	test ecx, ecx
 	je d0
 	mov eax, [ecx+04]
-	cmp dword ptr[eax+000002C4], 02
+	cmp dword ptr[eax+000002BC], 02
 	je d1
 	push 01
 b2:	call NO_SYMBOL
